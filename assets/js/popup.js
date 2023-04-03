@@ -113,8 +113,8 @@ $(document).ready(function () {
   })();
 
   /*--------------------------------------------------------------
-# Show draw number history
---------------------------------------------------------------*/
+  # Show draw number history
+  --------------------------------------------------------------*/
   const button = $(".draw-num-box");
   const list = $(".ball-history-list-SSC");
 
