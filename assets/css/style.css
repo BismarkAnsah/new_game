@@ -467,6 +467,12 @@ ul.list.column {
   margin-top: 10px;
   padding: 0.5rem;
 }
+
+.all-4-wrapper:hover, .all-4-wrapper.active {
+  background-color: var(--color-deepskyblue-200);
+  color: var(--color-white);
+  cursor: pointer;
+}
 /*--------------------------------------------------------------
 # End of All Games types
 --------------------------------------------------------------*/
