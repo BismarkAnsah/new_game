@@ -468,7 +468,8 @@ ul.list.column {
   padding: 0.5rem;
 }
 
-.all-4-wrapper:hover, .all-4-wrapper.active {
+.all-4-wrapper:hover,
+.all-4-wrapper.active {
   background-color: var(--color-deepskyblue-200);
   color: var(--color-white);
   cursor: pointer;
@@ -494,8 +495,7 @@ ul.list.column {
   margin: 0.5rem 0.5rem;
 }
 
-
-._width{
+._width {
   width: 160px !important;
 }
 
@@ -535,7 +535,6 @@ ul.list.column {
   width: fit-content;
 } */
 
-
 .play-methods_straight .game__labels {
   margin-right: 4em !important;
   text-align: end;
@@ -546,7 +545,6 @@ ul.list.column {
   grid-auto-rows: 1fr;
   gap: 0px 50px;
   grid-auto-flow: row;
-
 }
 
 /*--------------------------------------------------------------
@@ -717,7 +715,6 @@ div.coldHotList {
   color: var(--white);
   cursor: pointer;
   width: fit-content;
-
 }
 
 .button-Line-list button {
@@ -1587,3 +1584,77 @@ ul.multibetCounter {
 /*--------------------------------------------------------------
 # End of Tooltip Area
 --------------------------------------------------------------*/
+.longhu {
+  display: flex;
+  flex-flow: column wrap;
+  height: 442px;
+  /* background-color: #aa3434; */
+  box-shadow: none;
+  background-image: none;
+  margin: 0 10px;
+  min-height: 130px;
+  padding: 20px 10px 10px;
+}
+
+.longhu .longhuhe {
+  /* width: 50%; */
+  /* display: flex; */
+  margin-bottom: 15px;
+}
+
+.balls-ul .balls-row {
+  display: flex;
+  align-items: center;
+  /* align-items: flex-start; */
+  margin-bottom: 15px;
+}
+
+.ball .ball-item {
+  width: 100px !important;
+  height: 50px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.6;
+  border-radius: 6px;
+  position: relative;
+  color: #1b1b1b;
+  margin-right: 10px;
+  background-image: linear-gradient(180deg, #fff, #fff 77%, #f1f1f1);
+  box-shadow: 0 2px 4px 0 hsla(0, 0%, 69%, 0.5);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.showPrize {
+  color: #1b1b1b;
+  
+}
+.balls-row .row-title {
+  flex: none;
+  width: 57px;
+  line-height: 36px;
+  margin-right: 20px;
+  text-align: right;
+  font-size: 12px;
+  font-weight: 700;
+  color: #333;
+}
+.row-balls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.ball-item .introduce .introduce-symbol {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background-size: contain;
+}
