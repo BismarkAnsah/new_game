@@ -137,17 +137,17 @@ $(document).ready(function() {
 
 
 
-const tooltipBtn = document.querySelector('.tooltip-btn');
+// const tooltipBtn = document.querySelector('.tooltip-btn');
 
-tooltipBtn.addEventListener('mouseover', () => {
-    console.log("eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee")
-  tooltipBtn.setAttribute('data-show-tooltip', '');
-});
+// tooltipBtn.addEventListener('mouseover', () => {
+//     console.log("eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee")
+//   tooltipBtn.setAttribute('data-show-tooltip', '');
+// });
 
-tooltipBtn.addEventListener('mouseout', () => {
-    console.log("eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee")
-  tooltipBtn.removeAttribute('data-show-tooltip');
-});
+// tooltipBtn.addEventListener('mouseout', () => {
+//     console.log("eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee")
+//   tooltipBtn.removeAttribute('data-show-tooltip');
+// });
 
 
 

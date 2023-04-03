@@ -26,17 +26,17 @@ class RenderPage {
         let allGameGroupButtons = `<li class="list__menu_btn active">${this.gameGroups[0]}</li>`;
         let totalGames = this.gameGroups.length;
         let moreButton = `<li class="list__menu_btn" id="toggle-offload">more</li>`;
+        let firstLoopLength = totalGames;
         if(totalGames > this.totalGamesToDisplay){
             firstLoopLength = this.totalGamesToDisplay;
-            $('button-list').append(moreButton);
-        }else {
-            firstLoopLength = totalGames;
+            $('.button-list').append(moreButton);
         }
-        for(let i = 1; i < totalGames; i++) 
+        for(let i = 1; i < firstLoopLength; i++) 
         {
-            allGameGroupButtons += `<li class="list__menu_btn active">${this.gameGroups[i]}</li>`
+            allGameGroupButtons += `<li class="list__menu_btn">${this.gameGroups[i]}</li>`
         }
-        $('button-list').html(allGameGroupButtons);
+
+        $('.button-list').prepend(allGameGroupButtons);
     }
 
     displayGameSelections(){}
