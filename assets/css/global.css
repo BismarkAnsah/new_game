@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+@import url("https://fonts.cdnfonts.com/css/sf-digital-readout");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  /* overflow: hidden; */
+  font-size: var(--fontSmaller);
+  color: var(--color-white);
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  line-height: normal;
+  background-color: #2f324b !important;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+

@@ -1,0 +1,1573 @@
+/*--------------------------------------------------------------
+# Timer Box
+--------------------------------------------------------------*/
+.hide {
+  display: none;
+}
+
+.time-ticket {
+  /* width: 1115px; */
+  height: 179.72px;
+
+  /* ff 3.6+ */
+  background: -moz-linear-gradient(180deg, #24acfa 0%, #1b1b1b 100%);
+
+  /* safari 5.1+,chrome 10+ */
+  background: -webkit-linear-gradient(180deg, #24acfa 0%, #1b1b1b 100%);
+
+  /* opera 11.10+ */
+  background: -o-linear-gradient(180deg, #24acfa 0%, #1b1b1b 100%);
+
+  /* global 94%+ browsers support */
+  background: linear-gradient(180deg, #24acfa 0%, #1b1b1b 100%);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+.time-ticket-mini {
+  /* width: 1115px; */
+  height: fit-content;
+  margin-bottom: 1.5rem;
+  /* ff 3.6+ */
+  background: -moz-linear-gradient(180deg, #24acfa 0%, #1b1b1b 100%);
+
+  /* safari 5.1+,chrome 10+ */
+  background: -webkit-linear-gradient(180deg, #24acfa 0%, #1b1b1b 100%);
+
+  /* opera 11.10+ */
+  background: -o-linear-gradient(180deg, #24acfa 0%, #1b1b1b 100%);
+
+  /* global 94%+ browsers support */
+  background: linear-gradient(180deg, #24acfa 0%, #1b1b1b 100%);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+.time-ticket-mini {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  /* padding: 0.2rem; */
+}
+
+.timer__holder {
+  font-size: 4rem;
+  font-weight: 550;
+  text-align: center;
+  font-family: var(--font-sf-digital-readout);
+}
+
+.timer__holder_mini {
+  font-size: 3rem;
+  font-weight: 550;
+  text-align: center;
+  font-family: var(--font-sf-digital-readout);
+}
+
+.lottery__names-mini {
+  padding: 0.4rem;
+}
+.lottery-names {
+  font-size: var(--fontBig);
+}
+
+.drop-down-button98 {
+  cursor: pointer;
+  border: 0.5px solid var(--color-white);
+  margin-left: 0.4rem;
+  background-color: var(--color-gray-200);
+  border-radius: var(--br-8xs);
+  width: 17px;
+  height: 17px;
+}
+
+.time-ticket-mini {
+  display: flex;
+}
+
+.timer_progress_container-mini {
+  width: fit-content;
+}
+
+.progexx {
+  margin-top: 105px;
+}
+
+.progree-bar-item,
+.progree-bar1 {
+  border-radius: var(--br-6xl);
+}
+
+.progree-bar-item {
+  height: 100%;
+  background-color: var(--color-deepskyblue-200);
+  width: 24px;
+}
+
+.progree-bar1 {
+  background: linear-gradient(270deg, rgba(255, 0, 238, 0.15), gray);
+  border: 0.5px solid var(--color-white);
+  box-sizing: border-box;
+  width: 250px;
+  height: 6px;
+}
+
+.time1-mini {
+  border-radius: var(--br-8xs);
+  background-color: var(--color-deepskyblue-300);
+  border: 1px solid var(--color-gray-400);
+  box-sizing: border-box;
+  padding: 0.5rem 1rem;
+  font-size: var(--font-size-2xs);
+}
+
+.progree-bar1-mini {
+  width: 200px;
+  background: linear-gradient(270deg, rgba(255, 0, 238, 0.15), gray);
+  border: 0.5px solid var(--color-white);
+  box-sizing: border-box;
+  height: 6px;
+}
+
+.time1 {
+  border-radius: var(--br-8xs);
+  background-color: var(--color-deepskyblue-300);
+  border: 1px solid var(--color-gray-400);
+  box-sizing: border-box;
+  width: 100%;
+  height: 85px;
+  font-size: var(--font-size-2xs);
+}
+/* @media screen and (min-width: 768px) {
+    .timer__holder {
+      font-size: 3vw;
+    }
+  } */
+
+/* @media screen and (min-width: 1024px) {
+    .timer__holder {
+      font-size: 2.5vw;
+    }
+  } */
+
+.timer-date-time {
+  /* font-size: 1.2rem; */
+  font-weight: bolder;
+  text-align: center;
+  font-family: var(--font-sf-digital-readout);
+}
+
+.timer-box-contents {
+  text-align: center;
+}
+.bet-id-mini {
+  display: flex;
+}
+.for-sale {
+  margin-left: 0.7rem;
+}
+/*--------------------------------------------------------------
+# End of Timer Box
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Slot Machine
+--------------------------------------------------------------*/
+.draw-num-box {
+  width: fit-content;
+  display: flex;
+  height: 55px;
+}
+
+.draw-num-box-mini {
+  width: fit-content;
+  display: flex;
+  height: 35px;
+}
+
+.show__draw_nums_btn {
+  position: relative;
+}
+
+.slot__wrapper_draw_num_container-mini {
+  display: flex;
+  align-items: center;
+}
+
+.progress__timer {
+  display: flex;
+}
+
+.progress__timer-mini {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slot-wrapper {
+  /* margin: 0 auto; */
+  width: 300px;
+  height: 100px;
+  overflow: hidden;
+}
+
+.slot-wrapper-mini {
+  /* margin: 0 auto; */
+  /* width: 300px;
+  height: 100px; */
+  overflow: hidden;
+}
+
+.ball-animation-ul {
+  height: 55px;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  list-style-type: none;
+  cursor: pointer;
+}
+
+.ball-animation-ul-mini {
+  height: 35px;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  list-style-type: none;
+  cursor: pointer;
+}
+
+.ball-animation-ul li {
+  color: var(--black) !important;
+  font-size: 21.4px;
+  font-weight: 400;
+  margin-top: 0;
+}
+.ball-animation-ul-mini li {
+  color: var(--black) !important;
+  font-size: 21.4px;
+  font-weight: 400;
+  margin-top: 0;
+}
+
+.ball-animation-ul li div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 19px;
+  font-weight: bold;
+  height: 55px;
+  color: var(--black) !important;
+  width: 55px;
+  line-height: 35px;
+  text-align: center;
+  background: url("../libs/slot_machine/images/reel.png") no-repeat;
+  background-size: contain;
+}
+
+.ball-animation-ul-mini li div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 19px;
+  font-weight: bold;
+  height: inherit;
+  color: var(--black) !important;
+  width: 35px;
+  line-height: 35px;
+  text-align: center;
+  background: url("../libs/slot_machine/images/reel.png") no-repeat;
+  background-size: contain;
+}
+
+#n_02212211287__ {
+  display: flex;
+  /* align-items: center; */
+  justify-content: end;
+  margin: 1rem 0;
+}
+
+.control-box-mini {
+  display: flex;
+  align-items: center;
+}
+/*--------------------------------------------------------------
+# End of Slot Machine
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Tabs Hot and All
+--------------------------------------------------------------*/
+.hot__and__all_container,
+.standard__two_sides_conatiner {
+  display: flex;
+  align-items: center;
+}
+
+.hot__tab,
+.all__tab,
+.two__sides_tab,
+.standard_tab {
+  padding: 0.3rem;
+  /* height: fit-content; */
+  text-align: center;
+  width: 105px;
+  color: var(--color-black);
+  height: 30px;
+  border-radius: 10px 10px 0 0;
+  border: none;
+  margin-right: 0.5rem;
+  background-color: var(--color-white);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.hot__tab.active,
+.all__tab.active,
+.two__sides_tab,
+.standard_tab {
+  background-color: var(--color-deepskyblue-100);
+  color: var(--color-white);
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list li {
+  flex: 0 0 20%; /* to make sure each item takes up 20% of the container width */
+  text-align: center;
+}
+
+.show-more-btn {
+  display: none; /* hide the button by default */
+}
+
+.hidden {
+  display: none; /* hide the second list by default */
+}
+
+ul.list.column {
+  flex-direction: column;
+}
+/*--------------------------------------------------------------
+# End of Tabs Hot and All
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# All Games types
+--------------------------------------------------------------*/
+.main__games_content {
+}
+
+.all_five {
+  background-color: var(--color-deepskyblue-200);
+  height: fit-content;
+  width: 100%;
+  padding: 0.5rem;
+  /* overflow: hidden; */
+  position: relative;
+}
+.button-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.list__menu_btn {
+  display: inline-block;
+  padding: 0.5rem;
+  margin: 0 0.2rem;
+  border: none;
+  text-decoration: none;
+  border-radius: 7px;
+  background: #2f324b31;
+}
+
+.list__menu_btn:hover {
+  background: linear-gradient(#2f324b31, #5806587c);
+  color: white;
+  cursor: pointer;
+}
+
+.list__menu_btn.active {
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  overflow: hidden;
+  background: linear-gradient(#2f324b31, #5806587c);
+  outline: none;
+}
+
+.hot-offload {
+  width: 960px;
+  height: fit-content;
+  max-width: 90%;
+  /* max-height: 90%; */
+  border-radius: 10px;
+  text-align: center;
+  position: absolute;
+  top: 55px;
+  left: 0;
+  /* z-index: 122; */
+  /* display: none; */
+  font-size: var(--font-size-sm);
+  color: var(--color-deepskyblue-200);
+  font-family: var(--font-roboto);
+}
+
+.more-play-groups-wrapper {
+  line-height: normal;
+  text-align: center;
+  font-size: var(--font-size-sm);
+  color: var(--color-deepskyblue-200);
+  font-family: var(--font-roboto);
+  top: 0;
+  left: 0;
+
+  flex-wrap: wrap;
+  background-color: var(--color-deepskyblue-200);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  width: inherit;
+  height: fit-content;
+  border-radius: 15px;
+  padding: 1rem;
+}
+
+.more__games_items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+
+.all-4-wrapper {
+  font-size: var(--font-size-sm);
+  color: var(--color-deepskyblue-200);
+  height: 100%;
+  border-radius: var(--br-8xs);
+  background-color: var(--color-white);
+  box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.16);
+  width: 118px;
+  display: flex;
+  justify-content: center;
+  margin-right: 10px;
+  margin-top: 10px;
+  padding: 0.5rem;
+}
+/*--------------------------------------------------------------
+# End of All Games types
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# All Games Methods
+--------------------------------------------------------------*/
+.play-methods-sections-parent {
+  margin: 1rem 3rem;
+  /* display: flex; */
+}
+
+.uuuuuu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+
+._width{
+  width: 160px !important;
+}
+
+.play-methods-sections-parent > * {
+  display: flex;
+  align-items: center;
+  margin: 0.2rem 0;
+}
+
+.game__play_btns {
+  cursor: pointer;
+  border: 0;
+  text-align: center;
+  padding: 0.5rem;
+  background-color: var(--color-deepskyblue-200);
+  height: 100%;
+  margin: 13px 13px;
+  /* margin-top: 15px; */
+  border-radius: var(--br-8xs);
+  width: 120px;
+  white-space: nowrap;
+}
+
+/* .game__play_btns {
+  cursor: pointer;
+  border: 0;
+  text-align: center;
+  padding: 0.5rem;
+  background-color: var(--color-deepskyblue-200);
+  height: 100%;
+  margin: 13px 13px;
+  border-radius: var(--br-8xs);
+  width: fit-content;
+} */
+
+
+.play-methods_straight .game__labels {
+  margin-right: 4em !important;
+  text-align: end;
+  width: 60px;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  gap: 0px 50px;
+  grid-auto-flow: row;
+
+}
+
+/*--------------------------------------------------------------
+# End of All Games types
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Games Info
+--------------------------------------------------------------*/
+.game__info_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0.8rem;
+  background-color: var(--color-white);
+}
+
+.game__info_container > * {
+  color: var(--black) !important;
+}
+
+.hot__and__cold {
+  display: flex;
+  align-items: center;
+}
+
+.prize__bonus {
+  color: var(--color-deepskyblue-100);
+}
+.prize__bonus_amt {
+  color: var(--red);
+}
+
+.how-to-play,
+.what__is_solo {
+  border-radius: var(--br-8xs);
+  background-color: var(--color-deepskyblue-400);
+  width: 109px;
+  /* height: 21px; */
+  /* line-height: 10px; */
+  text-align: center;
+  padding: 0.3rem;
+  font-size: var(--font-size-smi);
+  color: var(--color-gray-100);
+}
+.hot__and__cold {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  /* padding: rem; */
+}
+.hotCold__wrapper,
+.lack__wrapper {
+  width: 80px;
+  padding: 5px;
+}
+.hotCold__wrapper > *,
+.lack__wrapper > * {
+  color: var(--color-deepskyblue-200);
+  /* display: flex; */
+  /* align-items: center; */
+
+  /* flex-direction: row; */
+}
+
+#hotCold {
+  padding: 0.5rem;
+}
+
+.coldHotList {
+  /* display: flex; */
+  border-radius: 15px;
+  /* justify-content: end; */
+  text-align: end;
+}
+
+div.coldHotList {
+  margin-right: 0;
+  border-radius: 6px;
+  background-image: linear-gradient(
+      180deg,
+      hsla(0, 0%, 100%, 0) 68%,
+      rgba(0, 0, 0, 0.2)
+    ),
+    linear-gradient(180deg, #efecec, #fff);
+  border: 1px solid #eee;
+}
+
+.coldHotList div.active {
+  border-radius: 6px;
+  background: #8065d8;
+  color: #fff;
+}
+.coldHotList_items {
+  color: var(--black);
+  /* margin-left: 3px; */
+  padding: 3px;
+  cursor: pointer;
+}
+
+.coldHotList_items.active {
+  background: #e56262;
+}
+
+/*--------------------------------------------------------------
+# End of All Games Info
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Game Selections Tab
+--------------------------------------------------------------*/
+.game__selections_wrapper {
+  /* background: #000; */
+  padding: 1rem;
+}
+
+.all-slots-parent {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.7rem;
+}
+
+.odd-wrapper {
+  cursor: pointer;
+  border: 0;
+  background-color: var(--color-darkslategray-100);
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: calc(50% + 2.5px);
+  border-radius: var(--br-31xl);
+  box-shadow: 1px 3px 7px rgba(252, 252, 252, 0.25) inset,
+    1px 2px 2px rgba(0, 0, 0, 0.16);
+  width: 70px;
+}
+
+.main-slots-wrapper {
+  display: flex;
+  align-items: center;
+  height: fit-content;
+}
+
+.stake-type,
+.stake-type1 {
+  width: 100%;
+  height: 37px;
+}
+
+.button-Line-list {
+  display: flex;
+  list-style: none;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.button-Line-list li {
+  /* display: inline-block;
+  border: none;
+  text-decoration: none; */
+  margin-left: 10px;
+  border-radius: 7px;
+}
+
+.button-Line-list li:hover {
+  background: var(--color-deepskyblue-200);
+  color: var(--white);
+  cursor: pointer;
+  width: fit-content;
+
+}
+
+.button-Line-list button {
+  width: 35px;
+  height: 35px;
+  border: none;
+  margin-right: 3px;
+  margin-left: 3px;
+  border-radius: 100%;
+  color: var(--color-deepskyblue-200);
+  background-color: transparent;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+}
+
+.first-3-straight-joint-wrapper {
+  width: 140px;
+  height: 16px;
+  color: var(--color-darkslategray-100);
+}
+
+.first-3-straight-joint-container {
+  cursor: pointer;
+  border: 0;
+  background-color: var(--color-deepskyblue-200);
+  height: 100%;
+  border-radius: var(--br-8xs);
+  width: 200px;
+}
+
+/* .stake-type-parent {
+  
+  left: 600px;
+  bottom: 0;
+  width: 445px;
+  height: 261px;
+  float: right;
+} */
+
+.control {
+  margin-top: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+.control__buttons {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: var(--color-darkslategray-100);
+  color: var(--white);
+  height: 100%;
+  border-radius: var(--br-6xl);
+  box-shadow: 1px 3px 7px rgba(252, 252, 252, 0.25) inset,
+    1px 2px 2px rgba(0, 0, 0, 0.16);
+  width: 45px;
+}
+
+.control__buttons:hover {
+  background-color: var(--color-deepskyblue-200);
+}
+
+#but_line_1 {
+  background: var(--white);
+  font-size: 24px;
+  /* border: 4px solid var(--color-deepskyblue-200); */
+}
+
+#but_line_1.active {
+  /* border: 4px solid var(--color-active-btn); */
+  background: var(--color-deepskyblue-200);
+  color: var(--white);
+}
+#but_line_1.active:hover {
+  border: 4px solid var(--color-deepskyblue-200);
+}
+
+.all__place_wrapper {
+  display: grid;
+  grid-template-columns: 0.65fr 4fr 1fr;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  /* gap: 0px 25px; */
+  grid-auto-flow: row;
+  margin-top: 1.5rem;
+}
+
+/* .all__place_wrapper{
+  display: flex;
+  justify-content: space-between;
+} */
+
+.column__btns__label {
+  display: flex;
+  align-items: center;
+  padding-left: 0.5rem;
+  text-align: center;
+}
+
+.t_container {
+  display: flex;
+  justify-content: start;
+  /* margin-left: 1rem;  */
+}
+
+.column-btns {
+  width: 35px;
+  padding: 0.5rem;
+  margin-right: 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+.column-btns > * {
+  padding: 0.3rem;
+  margin: 0.3rem 1rem;
+  border-radius: 5px;
+}
+.all_btn._col,
+.clear_btn._col {
+  /* background: #e56262; */
+  width: 40px;
+}
+.clear_btn._col {
+  padding: 0.4rem 0.1rem;
+}
+/*--------------------------------------------------------------
+# End of Game Selections Tab
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Multiplier Tab
+--------------------------------------------------------------*/
+/* .main__games_content {
+  position: relative !important;
+}
+
+.stake-bet {
+  position: absolute !important;
+  bottom: 0;
+} */
+.period__bonus {
+}
+.period-box,
+.bonus-box {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.draw__period,
+.bonus {
+  width: 80%;
+  border-radius: 15px;
+  margin-left: 1rem;
+  color: var(--black);
+  padding: 0.2rem;
+  outline: none;
+  border: none;
+}
+
+.draw__period option,
+.bonus option {
+  color: var(--black);
+  border: none;
+  outline: none;
+}
+.stake-bet {
+  border-radius: var(--br-3xs) var(--br-3xs) 0 0;
+  background-color: var(--color-deepskyblue-200);
+  width: 100%;
+  position: sticky;
+  bottom: 0;
+  /* margin:  10%; */
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* padding: 2rem; */
+}
+
+.amt_betting__multiplier {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.amou-bet {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  /* justify-content: space-between; */
+  height: fit-content;
+}
+
+.multibetCounter {
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem;
+}
+
+.minus_wrapper,
+.plus_frame {
+  cursor: pointer;
+  height: inherit;
+  border: 0;
+  text-align: center;
+  color: var(--white);
+  background-color: var(--color-darkslategray-100);
+  width: 30px;
+  font-weight: 700;
+}
+
+.minus_wrapper {
+  border-radius: var(--br-3xs) 0 0 var(--br-3xs);
+}
+
+.plus_frame {
+  border-radius: 0 var(--br-3xs) var(--br-3xs) 0;
+}
+
+#text-mul {
+  width: 40px;
+  outline: none;
+  height: inherit;
+  margin: 0 -4px;
+  background-color: white;
+  color: black;
+  text-align: center;
+  border: none;
+  text-decoration: none;
+}
+
+.multibetCounter > span {
+  cursor: pointer;
+}
+
+.multiplier__input_number {
+  height: 34px;
+}
+
+.multiplier__input_number input {
+  width: 120px;
+}
+
+.model,
+.no-amt {
+  margin-right: 1rem;
+  width: 60px;
+}
+
+.selected-0-note {
+  margin-left: 0.5rem;
+  font-size: var(--font-size-2xs);
+  line-break: strict;
+}
+
+.unit-amt-select-box,
+.multiplier-select-box,
+.model-select-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem;
+}
+
+.x1-wrapper {
+  border-radius: var(--br-3xs) 0 0 var(--br-3xs);
+  box-shadow: 2px 2px 3px rgba(255, 255, 255, 0.16) inset,
+    0 3px 2px rgba(0, 0, 0, 0.16);
+}
+
+.x1-wrapper,
+.x5-wrapper,
+.x10-wrapper,
+.x20-wrapper,
+.x30-wrapper,
+.x40-wrapper,
+.x50-wrapper {
+  width: 40px;
+  border: 0;
+  cursor: pointer;
+  height: 30px;
+  background-color: var(--color-whitesmoke);
+  box-shadow: 0 2px 3px rgba(255, 255, 255, 0.16) inset,
+    0 3px 2px rgba(0, 0, 0, 0.16);
+}
+
+.but_works {
+  width: 40px;
+  height: 30px;
+  text-shadow: 0 3px 2px rgba(0, 0, 0, 0.16);
+  border-radius: 0 10px 10px 0;
+  border: none;
+  background: var(--color-whitesmoke);
+  box-shadow: 0 2px 3px rgba(255, 255, 255, 0.16) inset,
+    0 3px 2px rgba(0, 0, 0, 0.16);
+}
+
+.model-select-box {
+  justify-content: start;
+}
+
+/*--------------------------------------------------------------
+# End of Multiplier Tab
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# All Bet datails Tab
+--------------------------------------------------------------*/
+.all__bet_data_tabs {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#myTab {
+  margin: 0 0.5rem;
+}
+
+.all__bet_info {
+  flex: 2;
+}
+
+.all__bet_info .wrapper {
+  margin-bottom: 1rem;
+}
+.number-basket-wrapper {
+  cursor: pointer;
+  border: 0;
+  background-color: var(--color-gray-300) !important;
+  color: var(--color-white) !important;
+  height: 48px;
+  border-radius: var(--br-3xs) var(--br-3xs) 0 0;
+  width: 85px;
+}
+.number-basket-wrapper.active {
+  background-color: var(--color-deepskyblue-200) !important;
+  color: var(--color-white) !important;
+}
+
+.tab-content {
+  height: 350px;
+  border: 1px solid var(--color-deepskyblue-200);
+}
+.tab-content table thead {
+  height: 21px;
+  background: var(--color-deepskyblue-200) 0% 0% no-repeat padding-box;
+}
+
+.chase_confirm-bet_now {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.total_bets > * {
+  font-size: 25px;
+}
+.total_bets {
+  padding: 2rem;
+  margin: 1rem;
+  border-bottom: solid 2px var(--color-deepskyblue-200);
+}
+
+.total__bets_note {
+  color: var(--red);
+  display: inline;
+}
+.bet_currency {
+  color: var(--color-deepskyblue-200);
+  font-size: var(--fontBig);
+}
+/*--------------------------------------------------------------
+# End of All Bet datails Tab
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Cart Area Tab
+--------------------------------------------------------------*/
+.cart-area .table-balance-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-area .container {
+  border: 1px solid;
+  margin: 0;
+  padding: 5px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.cart-area .wrapper {
+  margin: 5px 5px 5px 5px;
+  /* width: 800px; */
+  min-height: 300px;
+}
+
+.cart-area .table-content {
+  flex-grow: 4;
+  margin: auto;
+  text-align: center;
+}
+
+.cart-area .table-content.sub-table {
+  margin: 0 !important;
+}
+
+.cart-area .table-content ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.cart-area .table-content ul .guestCounter {
+  margin: 0;
+}
+
+.cart-area .table-content ul .input-multibet-counter {
+  margin: 0;
+  width: 65px;
+}
+
+.cart-area .table-content ul .input-multibet-counter:focus {
+  outline: none !important;
+}
+
+.cart-area .balance-content {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.cart-area .balance-content thead th {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.balance-content table {
+  table-layout: fixed;
+  width: 200px;
+}
+.cart-area .table-balance-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-area .table > tbody {
+  vertical-align: middle;
+}
+
+.cart-area .form-check-input {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.cart-area .balance-content table tbody {
+  height: 180px;
+  padding-bottom: 2rem;
+}
+
+.cart-area .total-bets {
+  color: var(--red);
+}
+
+.btn-bet-now,
+.btn-track,
+.cart-btn-track {
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  padding: 0.5rem;
+}
+
+.btn-track:hover {
+  background-color: var(--lightGrey);
+}
+
+.btn-track:hover {
+  box-shadow: 2px 2px 5px 1px var(--orangeRed);
+  background-image: linear-gradient(to bottom, #e65b35, #f70000);
+  text-decoration: none;
+}
+
+.cart-increment,
+.cart-decrement {
+  width: 17px;
+  background-color: var(--lightGrey);
+}
+
+ul.multibetCounter {
+  border-radius: 5px !important;
+  margin: 0;
+  padding: 0;
+  width: 100px;
+  height: 22px;
+  background-color: var(--lighterGrey);
+  color: var(--black);
+}
+
+.bi-plus,
+.bi-dash {
+  font-size: 14px;
+}
+
+.mask-balance {
+  content: "";
+}
+
+/*--------------------------------------------------------------
+# Track
+--------------------------------------------------------------*/
+.tab-pane {
+  height: inherit;
+}
+.draw-and-multibet-container {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-around; */
+  padding: 1rem;
+  align-items: flex-start;
+}
+
+.draw-and-multibet-container .card {
+  width: 100%;
+}
+
+#track-tab-pane .table-content {
+  padding: 1rem;
+  /* background-color: #f70000; */
+}
+
+.cart-area .nav-link.active {
+  border-color: transparent;
+}
+
+.cart-area .nav-tabs {
+  border-color: transparent;
+}
+.cart-area button.nav-link {
+  padding: 0;
+}
+
+#track-tab-pane ul#trackTab.nav-tabs {
+  width: 100%;
+  height: 30px;
+  padding: 0 !important;
+  background-color: var(--lighterGrey);
+}
+.first-multi-draws {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.first-draw-container select {
+  width: 200px;
+  padding: 0.5rem;
+}
+
+.btn-current {
+  padding-top: 1px !important;
+  padding-bottom: 1px !important;
+}
+
+/* .btn-next-day{
+  background-color: var(--activeColorBtn) !important;
+  color: var(--white) !important;
+  padding: 0.3rem !important;
+  border-radius: 5px;
+  font-weight: bold;
+  width: fit-content;
+  white-space: nowrap;
+  padding-bottom: 0.5rem !important;
+
+} */
+
+.tableFixHead {
+  overflow-y: auto;
+  max-height: 200px;
+}
+
+.tableFixHead input[type="number"]#betID::-webkit-inner-spin-button,
+.tableFixHead input[type="number"]#betID::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.tableFixHead input[type="number"]#betID:focus,
+.tableFixHead input[type="number"]#betID:focus {
+  outline: none;
+}
+
+.tableFixHead table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.tableFixHead th,
+.tableFixHead td {
+  padding: 8px 16px;
+}
+
+.track-table-content thead {
+  background: var(--lighterGrey);
+  border-bottom: 1px solid var(--lighterGrey);
+}
+
+/* .cart-area .table-body td{
+  width:fit-content;
+} */
+.cart-area .my-ul-el {
+  width: inherit !important;
+  display: flex !important;
+  /* justify-content: ; */
+  /* background-color: #e65b35; */
+}
+
+.tableFixHead thead {
+  position: sticky;
+  top: -1px;
+  background: var(--lighterGrey);
+}
+
+/********** STYLING FOR SCROLLBAR IN TABLE **********************/
+/*! Firefox */
+.tableFixHead {
+  scrollbar-color: #128612 #004e00;
+}
+
+/*! Other Browser */
+.tableFixHead {
+  --scrollbarBG: #caffff;
+  --thumbBG: #0392f1;
+}
+.tableFixHead::-webkit-scrollbar {
+  width: 11px;
+}
+.tableFixHead {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+.tableFixHead::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+.tableFixHead::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG);
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
+}
+
+.tableFixHead ul {
+  background-color: transparent;
+  width: 100%;
+}
+
+.tableClassName tbody {
+  display: block;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.tableClassName thead,
+.tableClassName tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.tableClassName thead {
+  width: 100%;
+}
+
+.tableClassName th,
+.tableClassName td {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 100px;
+}
+
+.first-multi-draws-negative-margin {
+  margin-left: -3.5rem;
+}
+
+/*--------------------------------------------------------------
+# ModalDialog
+--------------------------------------------------------------*/
+
+#m-betModal {
+  z-index: 999999;
+}
+
+#m-betModal .modal-dialog-center {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*--------------------------------------------------------------
+# Default Buttons
+--------------------------------------------------------------*/
+
+.m-btn-orange {
+  background-color: var(--orangeRed);
+  color: var(--white);
+  border-radius: 0.3rem;
+}
+
+.m-btn-indigo {
+  background-color: var(--activeColorBtn) !important;
+  color: var(--white) !important;
+  padding: 0.3rem !important;
+  border-radius: 5px;
+  font-weight: bold;
+  width: fit-content;
+  white-space: nowrap;
+  /* padding-bottom: 0.5rem !important; */
+}
+
+.m-btn-ash {
+  background-color: var(--silver);
+  color: var(--white);
+  border-radius: 0.3rem;
+}
+
+.m-btn-purple-blue {
+  background-color: var(--purpleBlue);
+  color: var(--white);
+  border-radius: 0.3rem;
+}
+
+.m-track-timer {
+  background-color: transparent !important;
+  width: 200px;
+  font-weight: 100 !important;
+  font-size: 18px !important;
+}
+
+.m-track-timer .display-6 {
+  font-size: 2rem !important;
+}
+/*--------------------------------------------------------------
+# End of Cart Area Tab
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Tooltip Area
+--------------------------------------------------------------*/
+.tooltip-btn {
+  position: relative;
+}
+
+.tooltip-btn::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: calc(100% + 5px); /* Position the tooltip below the button */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  background-color: #fff;
+  color: #333;
+  font-size: 14px;
+  border-radius: 5px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.tooltip-btn::after {
+  content: "";
+  position: absolute;
+  top: -10px; /* Position the tooltip arrow above the tooltip */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #fff transparent;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.tooltip-btn:hover::before,
+.tooltip-btn:hover::after {
+  opacity: 1;
+}
+
+.ball-history-list-SSC {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  z-index: 999;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border-radius: 10px;
+}
+
+.ball-history-list-SSC li {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: inherit;
+}
+
+.ball-history-list-SSC li > * {
+  color: black;
+}
+
+.bet-ball-animation .ball-history-list li {
+  top: 0;
+  opacity: 0.7;
+  margin-bottom: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
+  white-space: nowrap;
+  justify-content: space-between;
+}
+
+.bet-ball-animation .ball-history-list li .qihao {
+  display: flex;
+  white-space: nowrap;
+  font-size: 14px;
+  color: #6d7278;
+}
+
+.bet-ball-animation .ball-history-list li .jianghaoList {
+  margin-left: 9px;
+  display: flex;
+}
+
+.jianghao {
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem;
+  margin-right: 4px;
+  background-image: url("/assets/images/public/ellipse-12.svg");
+  background-size: 100% 100%;
+  color: var(--color-deepskyblue-200);
+  font-weight: 600;
+  text-align: center;
+  background-repeat: no-repeat;
+}
+/*--------------------------------------------------------------
+# End of Tooltip Area
+--------------------------------------------------------------*/
