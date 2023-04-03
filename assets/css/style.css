@@ -1519,8 +1519,10 @@ ul.multibetCounter {
 
 .ball-history-list-SSC {
   width: 320px;
+  /* height: 350px; */
   display: flex;
   flex-direction: column;
+  align-items: center;
   position: absolute;
   top: 40px;
   right: 0;
