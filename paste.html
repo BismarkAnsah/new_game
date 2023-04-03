@@ -1,0 +1,162 @@
+<!-- <ul class="tab-menu">
+        <li class="active"><a href="#tab1">Tab 1</a></li>
+        <li><a href="#tab2">Tab 2</a></li>
+      </ul>
+      
+      <div class="tab-content">
+        <div id="tab1" class="tab-panel active-tab">
+          <p>Content for Tab 1 goes here.</p>
+        </div>
+        <div id="tab2" class="tab-panel">
+          <p>Content for Tab 2 goes here.</p>
+        </div>
+        
+      </div> -->
+
+<!-- <ul class="tab-list">
+        <li class="active">Tab 1</li>
+        <li>Tab 2</li>
+      </ul>
+      
+      <div class="tab-content">
+        <div class="tab-panel active">Content for Tab 1</div>
+        <div class="tab-panel">Content for Tab 2</div>
+      </div> -->
+
+
+
+
+
+
+
+
+
+
+
+.tab-list {
+list-style-type: none;
+margin: 0;
+padding: 0;
+display: flex;
+}
+
+.tab-list li {
+margin-right: 20px;
+padding: 10px 20px;
+background-color: #eee;
+cursor: pointer;
+}
+
+.tab-list li.active {
+background-color: #ddd;
+}
+
+.tab-panel {
+display: none;
+}
+
+.tab-panel.active {
+display: block;
+}
+
+.tab-menu {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: #f1f1f1;
+}
+
+.tab-menu li {
+float: left;
+}
+
+.tab-menu li a {
+display: block;
+color: #000;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+border-bottom: 2px solid transparent;
+}
+
+.tab-menu li.active a {
+border-bottom: 2px solid #000;
+}
+
+.tab-content {
+display: block;
+padding: 20px;
+}
+
+.active-tab {
+display: block;
+}
+
+
+
+<ul class="ball-history-list ball-history-list-SSC" style="display: none;">
+  <li><span class="qihao">
+      20230331-1375
+    </span>
+    <span class="jianghaoList">
+      <span>
+        <i class="jianghao">
+          8
+        </i>
+      </span>
+      <span>
+        <i class="jianghao">
+          2
+        </i>
+      </span>
+      <span>
+        <i class="jianghao">
+          9
+        </i>
+      </span>
+      <span>
+        <i class="jianghao">
+          7
+        </i>
+      </span>
+      <span><i class="jianghao">
+          2
+        </i>
+      </span>
+    </span>
+  </li>
+
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Get the list of tabs
+const tabs = document.querySelectorAll(".tab-menu li");
+
+// Get the content panels
+const panels = document.querySelectorAll(".tab-content .tab-panel");
+
+// Add click event listener to each tab
+tabs.forEach((tab, index) => {
+tab.addEventListener("click", () => {
+// Remove active class from all tabs and panels
+tabs.forEach((tab) => tab.classList.remove("active"));
+panels.forEach((panel) => panel.classList.remove("active-tab"));
+
+// Add active class to clicked tab and panel
+tab.classList.add("active");
+panels[index].classList.add("active-tab");
+});
+});
