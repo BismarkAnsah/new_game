@@ -1,5 +1,5 @@
 class RenderPage {
-    
+
     gameGroups = [
         "All 5",
         "All 4",
@@ -42,3 +42,6 @@ class RenderPage {
     displayGameSelections(){}
     displayGameControls(){}
 }
+
+let render = new RenderPage();
+render.displayGameGroups();
