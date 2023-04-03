@@ -312,7 +312,7 @@
 .all__tab,
 .two__sides_tab,
 .standard_tab {
-  padding: 0.3rem;
+  padding: 0.6rem;
   /* height: fit-content; */
   text-align: center;
   width: 105px;
@@ -328,8 +328,8 @@
 
 .hot__tab.active,
 .all__tab.active,
-.two__sides_tab,
-.standard_tab {
+.two__sides_tab.active,
+.standard_tab.active {
   background-color: var(--color-deepskyblue-100);
   color: var(--color-white);
 }
@@ -490,6 +490,10 @@ ul.list.column {
   flex-wrap: wrap;
   justify-content: start;
 }
+.uuuuuu > * {
+  margin: 0.5rem 0.5rem;
+}
+
 
 ._width{
   width: 160px !important;
@@ -508,11 +512,15 @@ ul.list.column {
   padding: 0.5rem;
   background-color: var(--color-deepskyblue-200);
   height: 100%;
-  margin: 13px 13px;
+  /* margin: 13px 13px; */
   /* margin-top: 15px; */
   border-radius: var(--br-8xs);
   width: 120px;
   white-space: nowrap;
+}
+
+.all__play_btns > * {
+  margin: 1rem 0;
 }
 
 /* .game__play_btns {
