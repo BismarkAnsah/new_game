@@ -1610,6 +1610,7 @@ ul.multibetCounter {
 }
 
 
+
 .ball .ball-item {
   width: 100px !important;
   height: 50px !important;
@@ -1629,12 +1630,20 @@ ul.multibetCounter {
   font-weight: 500;
 }
 
-.ball-item:hover, .ball-item:hover > * {
+.ball-item:hover, .ball-item:hover > .showPrize {
   box-shadow: 0 0px 0px 0 hsla(0, 0%, 69%, 0.5);
   background: var(--color-deepskyblue-100);
   color: #fff;
 } 
 
+.ball-item:hover .fa-info-circle{
+  color: var(--color-white) !important;
+}
+
+.fa.fa-info-circle {
+  color: var(--color-deepskyblue-100);
+  font-size: 14px;
+}
 .showPrize {
   color: #1b1b1b;
   
