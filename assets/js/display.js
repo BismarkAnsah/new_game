@@ -26,6 +26,34 @@ class RenderPage {
 
     labels = ["1st", "2nd", "3rd", "4th", "5th"];
 
+    
+    gamesAndOdds = {
+        "1v2":{
+            "odds":0.2224,
+            "name":"Dragon"
+        },
+        "1v3":{
+            "odds":0.2556,
+            "name":"Tiger"
+        },
+        "1v4":{
+            "odds":0.2556,
+            "name":"Tie"
+        },
+        "2v3":{
+            "odds":0.2224,
+            "name":"Dragon"
+        },  
+        "2v4":{
+            "odds":0.2556,
+            "name":"Tiger"
+        },
+        "3v4":{ 
+            "odds":0.2556,
+            "name":"Tie"
+        }
+    }
+
 
     gameSelections = [
         {
@@ -99,7 +127,7 @@ class RenderPage {
     }
 
 
-    displayGameControls() {
+    displayGameControls1() {
         let buttonNumber = 1;
         let rowIndex = 1;
         
@@ -132,12 +160,103 @@ class RenderPage {
 
         $(".game__selections_wrapper").html(rowInterface);
     }
+    displayGameControls2() {
+        let buttonNumber = 1;
+        let rowIndex = 1;
+        
+        let rowInterface = ``;
+        [""].forEach(label => {
+            rowInterface += `<div class="all-slots-parent">
+                        <div class="first-3-straight">${label}</div>
+                            <div class="main-slots-wrapper All_Select">
+                                <ul class="button-Line-list _wrap">`;
+                                for (let buttonNumber = 0; buttonNumber <= 27; buttonNumber++) {
+                                    rowInterface += `<li><button id="but_line_1" value="${buttonNumber}" class="number-button-b row${rowIndex}">${buttonNumber}</button></li>`;
+                                }
+
+                               rowInterface += `</ul>
+                            </div>
+                            <div class="stake-type-parent">
+                                <div class="stake-type">
+                                <button class="control__buttons all_btn _row row${rowIndex}">All</button>
+                                <button class="control__buttons big_btn row${rowIndex}">Big</button>
+                                <button class="control__buttons small_btn row${rowIndex}">Small</button>
+                                <button class="control__buttons odd_btn row${rowIndex}">Odd</button>
+                                <button class="control__buttons even_btn row${rowIndex}">Even</button>
+                                <button class="control__buttons clear_btn _row row${rowIndex}">Clear</button>
+                                </div>
+                            </div>
+                        </div>`;
+            buttonNumber++;
+            rowIndex++;
+        });
+
+        $(".game__selections_wrapper").html(rowInterface);
+    }
+
+    displayGameControls3()
+    {
+        <ul class="balls-ul-dragon longhu ul-longhuhe no-position">
+                        <li class="balls-row longhuhe balls-row-lryl">
+                            <div class="row-title"><span>1st V 2nd</span></div>
+                            <div class="row-balls">
+                                <div class="ball">
+                                    <div class="ball-item">
+                                        Dragon
+                                        <div class="showPrize">
+                                            0.0022
+                                        </div>
+                                        <div class="introduce">
+                                            <span class="el-tooltip introduce-symbol icon-quest-purple" trigger="hover" aria-describedby="el-tooltip-3316" tabindex="0">
+                                                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                        <div class="cmInBalls hot__cold">
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="ball-cm" style="display: none;"></div>
+                                </div>
+                                <div class="ball">
+                                    <div class="ball-item">
+                                        Tiger
+                                        <div class="showPrize">
+                                            0.0022
+                                        </div>
+                                        <div class="introduce">
+                                            <span class="el-tooltip introduce-symbol icon-quest-purple" trigger="hover" aria-describedby="el-tooltip-3316" tabindex="0">
+                                                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                        <div class="cmInBalls"></div>
+                                    </div>
+                                    <div class="ball-cm" style="display: none;"></div>
+                                </div>
+                                <div class="ball">
+                                    <div class="ball-item">
+                                        Tie
+                                        <div class="showPrize">
+                                            0.0099
+                                        </div>
+                                        <div class="introduce">
+                                            <span class="el-tooltip introduce-symbol icon-quest-purple" trigger="hover" aria-describedby="el-tooltip-3316" tabindex="0">
+                                                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                        <div class="cmInBalls"></div>
+                                    </div>
+                                    <div class="ball-cm" style="display: none;"></div>
+                                </div>
+                            </div> 
+                        </li>
+                    </ul>
+    }
 }
 
 let render = new RenderPage();
 render.displayGameGroups();
 render.displayGameSelections();
-render.displayGameControls();
+render.displayGameControls2();
 
 
 //all button
@@ -187,8 +306,8 @@ $(document).on("click", ".clear_btn._row", function () {
 
 
 //click on number button
-$(document).on("click", ".number-button-b", function () {
-    $(this).addClass("active");
+$(document).on("click", ".number-button-b, .ball-item", function () {
+    $(this).toggleClass("active");
 });
 
 let selection = $(".number-button-b.row1:nth-child(n+5)");
