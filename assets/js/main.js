@@ -131,7 +131,14 @@ function switchTab(tabId) {
 }
 
 
-
+export function buttonActiveAnimator (thisParam){
+  anime({
+    targets: thisParam,
+    scale: [0.3, 1],
+    easing: 'easeInQuad',
+    duration: 300
+  });
+}
 
 
 
