@@ -267,7 +267,7 @@ class RenderPage {
 let render = new RenderPage();
 render.displayGameGroups();
 render.displayGameSelections();
-// render.displayGameControls4();
+render.displayGameControls1();
 
 
 //all button
