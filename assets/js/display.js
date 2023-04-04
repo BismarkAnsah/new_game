@@ -80,4 +80,4 @@ class RenderPage {
 
 let render = new RenderPage();
 render.displayGameGroups();
-render.displayGameSelections();
+// render.displayGameSelections();
