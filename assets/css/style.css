@@ -1602,7 +1602,7 @@ ul.multibetCounter {
   margin-bottom: 15px;
 }
 
-.balls-ul-dragon .balls-row-dragon {
+.balls-ul-dragon .balls-row {
   display: flex;
   align-items: center;
   /* align-items: flex-start; */
@@ -1649,7 +1649,7 @@ ul.multibetCounter {
   
 }
 
-.balls-row-dragon .row-title {
+.balls-row .row-title {
   flex: none;
   width: 57px;
   line-height: 36px;
@@ -1659,6 +1659,14 @@ ul.multibetCounter {
   font-weight: 700;
   color: #333;
 }
+
+.balls-row-lryl {
+  display: flex;
+  /* width: inherit; */
+  align-items: center;
+  margin-bottom: 15px;
+}
+
 .row-balls {
   display: flex;
   flex-wrap: wrap;
@@ -1692,7 +1700,7 @@ ul.multibetCounter {
   font-size: 0;
 }
 
-.lottery-content .balls-plate .balls-ul .balls-row .row-balls .ball .ball-item .cmInBalls > span.hot {
+.balls-row .row-balls .ball .ball-item .cmInBalls > span.hot {
   border-radius: 4px;
   box-shadow: 0 1px 1px 0 hsla(0,0%,63.5%,.5);
 }
@@ -1712,3 +1720,34 @@ ul.multibetCounter {
 /*--------------------------------------------------------------
 # End of Hot and cold button styles in dragon and tiger
 --------------------------------------------------------------*/
+
+.balls-plate.SSC .balls-ul.daxiaodanshuang{
+  background-color: #f0f0f0;
+  display: flex;
+  width: inherit;
+  box-shadow: none;
+  background-image: none;
+  margin: 0 10px;
+  min-height: 130px;
+  padding: 20px 10px 10px;
+}
+.daxiaodanshuang{
+  justify-content: left;
+}
+.qianerzuhe .row-balls{
+  justify-content: start;
+}
+.qianerzuhe .ball-item {
+  margin-bottom: 1rem;
+}
+._wrap{
+  width: 572px;
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+}
+._wrap > li {
+  margin-bottom: 1rem;
+  margin-left: 0px;
+  display: flex;
+}
