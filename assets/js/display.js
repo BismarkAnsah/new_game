@@ -28,31 +28,16 @@ class RenderPage {
 
     labels = ["1st", "2nd", "3rd", "4th", "5th"];
 
-    
+    games4 = {
+        "labels": ["Big", "Small", "Odd", "Even"]
+    }
     gamesAndOdds = {
-        "1v2":{
-            "odds":0.2224,
-            "name":"Dragon"
-        },
-        "1v3":{
-            "odds":0.2556,
-            "name":"Tiger"
-        },
-        "1v4":{
-            "odds":0.2556,
-            "name":"Tie"
-        },
-        "2v3":{
-            "odds":0.2224,
-            "name":"Dragon"
-        },  
-        "2v4":{
-            "odds":0.2556,
-            "name":"Tiger"
-        },
-        "3v4":{ 
-            "odds":0.2556,
-            "name":"Tie"
+        "labels": ["1v2", "1v3", "1v4", "1v5", "2v3", "2v4", "2v5", "3v4", "3v5", "4v5"],
+
+        "games": {
+            "Dragon": 0.0022,
+            "Tiger": 0.0044,
+            "Tie": 0.0088,
         }
     }
 
@@ -132,18 +117,18 @@ class RenderPage {
     displayGameControls1() {
         let buttonNumber = 1;
         let rowIndex = 1;
-        
+
         let rowInterface = ``;
         this.labels.forEach(label => {
             rowInterface += `<div class="all-slots-parent">
                         <div class="first-3-straight">${label}</div>
                             <div class="main-slots-wrapper All_Select">
                                 <ul class="button-Line-list">`;
-                                for (let buttonNumber = 0; buttonNumber <= 9; buttonNumber++) {
-                                    rowInterface += `<li><button id="but_line_1" value="${buttonNumber}" class="number-button-b row${rowIndex}">${buttonNumber}</button></li>`;
-                                }
+            for (let buttonNumber = 0; buttonNumber <= 9; buttonNumber++) {
+                rowInterface += `<li><button id="but_line_1" value="${buttonNumber}" class="number-button-b row${rowIndex}">${buttonNumber}</button></li>`;
+            }
 
-                               rowInterface += `</ul>
+            rowInterface += `</ul>
                             </div>
                             <div class="stake-type-parent">
                                 <div class="stake-type">
@@ -165,18 +150,18 @@ class RenderPage {
     displayGameControls2() {
         let buttonNumber = 1;
         let rowIndex = 1;
-        
+
         let rowInterface = ``;
         [""].forEach(label => {
             rowInterface += `<div class="all-slots-parent">
                         <div class="first-3-straight">${label}</div>
                             <div class="main-slots-wrapper All_Select">
                                 <ul class="button-Line-list _wrap">`;
-                                for (let buttonNumber = 0; buttonNumber <= 27; buttonNumber++) {
-                                    rowInterface += `<li><button id="but_line_1" value="${buttonNumber}" class="number-button-b row${rowIndex}">${buttonNumber}</button></li>`;
-                                }
+            for (let buttonNumber = 0; buttonNumber <= 27; buttonNumber++) {
+                rowInterface += `<li><button id="but_line_1" value="${buttonNumber}" class="number-button-b row${rowIndex}">${buttonNumber}</button></li>`;
+            }
 
-                               rowInterface += `</ul>
+            rowInterface += `</ul>
                             </div>
                             <div class="stake-type-parent">
                                 <div class="stake-type">
@@ -196,17 +181,19 @@ class RenderPage {
         $(".game__selections_wrapper").html(rowInterface);
     }
 
-    displayGameControls3()
-    {
-            `<ul class="balls-ul-dragon longhu ul-longhuhe no-position">
-                        <li class="balls-row longhuhe balls-row-lryl">
-                            <div class="row-title"><span>1st V 2nd</span></div>
+    displayGameControls3() {
+        let gameInterface = ``;
+        this.gamesAndOdds.labels.forEach((label) => {
+            let games = this.gamesAndOdds.games;
+            let gameNames = Object.keys(games);
+            gameInterface += `<li class="balls-row longhuhe balls-row-lryl">
+                            <div class="row-title"><span>${label}</span></div>
                             <div class="row-balls">
                                 <div class="ball">
                                     <div class="ball-item">
-                                        ${gameName}
+                                        ${gameNames[0]}
                                         <div class="showPrize">
-                                            ${odds}
+                                            ${games[gameNames[0]]}
                                         </div>
                                         <div class="introduce">
                                             <span class="el-tooltip introduce-symbol icon-quest-purple" trigger="hover" aria-describedby="el-tooltip-3316" tabindex="0">
@@ -221,9 +208,9 @@ class RenderPage {
                                 </div>
                                 <div class="ball">
                                     <div class="ball-item">
-                                       ${gameName}
+                                       ${gameNames[1]}
                                         <div class="showPrize">
-                                            ${odds}
+                                        ${games[gameNames[1]]}
                                         </div>
                                         <div class="introduce">
                                             <span class="el-tooltip introduce-symbol icon-quest-purple" trigger="hover" aria-describedby="el-tooltip-3316" tabindex="0">
@@ -236,9 +223,9 @@ class RenderPage {
                                 </div>
                                 <div class="ball">
                                     <div class="ball-item">
-                                        ${gameName}
+                                        ${gameNames[2]}
                                         <div class="showPrize">
-                                            ${odds}
+                                        ${games[gameNames[2]]}
                                         </div>
                                         <div class="introduce">
                                             <span class="el-tooltip introduce-symbol icon-quest-purple" trigger="hover" aria-describedby="el-tooltip-3316" tabindex="0">
@@ -251,14 +238,36 @@ class RenderPage {
                                 </div>
                             </div> 
                         </li>
-                    </ul>`
+                `});
+        $(".balls-ul-dragon").html(gameInterface);
+    }
+
+    displayGameControls4() {
+        let gameInterface = ``;
+        this.games4.labels.forEach((label) => {
+            gameInterface += `<div class="row-title"><span>1st</span></div>
+                                <div class="ball">
+                                  <div class="ball-item long">
+                                    ${label}  
+                                    <div class="cmInBalls">
+                                      <span class="hot"></span>
+                                      <span class="miss"></span>
+                                    </div>
+                                  </div>
+                                  <div class="ball-cm" style="display: none">
+                                    
+                                    
+                                  </div>
+                                </div>`
+        });
+        $(".balls-ul").html(gameInterface);
     }
 }
 
 let render = new RenderPage();
 render.displayGameGroups();
 render.displayGameSelections();
-render.displayGameControls2();
+// render.displayGameControls4();
 
 
 //all button
@@ -274,15 +283,15 @@ $(document).on("click", ".big_btn", function () {
     console.log($(`.number-button-b.row${rowIndex}`))
     buttonActiveAnimator($(`.number-button-b.row${rowIndex}`));
     $(`.number-button-b.row${rowIndex}`).removeClass("active");
-    $(`.number-button-b.row${rowIndex}`).filter(function() {
+    $(`.number-button-b.row${rowIndex}`).filter(function () {
         return $(this).val() >= 5 && $(this).val() <= 9;
-      }).addClass("active");
-    
+    }).addClass("active");
+
 });
 
 //small button
 $(document).on("click", ".small_btn", function () {
-    
+
     let rowIndex = $(this).attr("class").split(" ")[2].slice(-1);
     $(`.number-button-b.row${rowIndex}`).removeClass("active");
     $(`.number-button-b.row${rowIndex}:lt(5)`).addClass("active");
@@ -290,7 +299,7 @@ $(document).on("click", ".small_btn", function () {
 
 //odd button
 $(document).on("click", ".odd_btn", function () {
-    
+
     let rowIndex = $(this).attr("class").split(" ")[2].slice(-1);
     $(`.number-button-b.row${rowIndex}`).removeClass("active");
     console.log(rowIndex)
@@ -299,7 +308,7 @@ $(document).on("click", ".odd_btn", function () {
 
 //even button
 $(document).on("click", ".even_btn", function () {
-    
+
     let rowIndex = $(this).attr("class").split(" ")[2].slice(-1);
     $(`.number-button-b.row${rowIndex}`).removeClass("active");
     $(`.number-button-b.row${rowIndex}:even`).addClass("active");
@@ -317,6 +326,7 @@ $(document).on("click", ".number-button-b, .ball-item", function () {
     $(this).toggleClass("active");
 });
 
-let selection = $(".number-button-b.row1:nth-child(n+5)");
-console.log(selection);
+$(document).on("click", ".game__play_btns", function () {
+    
+});
 
