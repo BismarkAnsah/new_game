@@ -191,7 +191,7 @@
   height: 35px;
 }
 
-.show__draw_nums_btn {
+.show__draw_nums_btn, .show__draw_nums_btn-mini {
   position: relative;
 }
 
@@ -1546,7 +1546,7 @@ ul.multibetCounter {
   opacity: 1;
 }
 
-.ball-history-list-SSC {
+.ball-history-list-SSC, .ball-history-list-SSC-mini {
   width: 320px;
   /* height: 350px; */
   display: flex;
@@ -1565,14 +1565,18 @@ ul.multibetCounter {
   border-radius: 10px;
 }
 
-.ball-history-list-SSC li {
+.ball-history-list-SSC-mini {
+  top: 30px;
+}
+
+.ball-history-list-SSC li, .ball-history-list-SSC-mini li {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   width: inherit;
 }
 
-.ball-history-list-SSC li > * {
+.ball-history-list-SSC li > *, .ball-history-list-SSC-mini li > * {
   color: black;
 }
 

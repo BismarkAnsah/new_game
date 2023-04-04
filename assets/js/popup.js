@@ -114,8 +114,11 @@ $(document).ready(function () {
 });
 
 $(document).ready(function() {
-    const button = $('.drop-down-button98');
+    const button = $('.draw-num-box');
+    const button_mini = $('.draw-num-box-mini');
+
     const list = $('.ball-history-list-SSC');
+    const list_mini = $('.ball-history-list-SSC-mini');
   
     button.mouseover(function() {
       list.show();
@@ -123,6 +126,16 @@ $(document).ready(function() {
   
     button.mouseout(function() {
       list.hide();
+    });
+
+    button_mini.mouseover(function() {
+      console.log("jkdsjhfkhdks")
+      console.log(list_mini)
+      list_mini.show();
+    });
+  
+    button_mini.mouseout(function() {
+      list_mini.hide();
     });
   
     list.mouseover(function() {
