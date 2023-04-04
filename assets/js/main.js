@@ -141,6 +141,16 @@ export function buttonActiveAnimator (thisParam){
 }
 
 
+const textarea = document.getElementById("myTextarea");
+
+textarea.addEventListener("input", () => {
+    if (textarea.value.trim() !== "") {
+      textarea.classList.remove("empty");
+    } else {
+      textarea.classList.add("empty");
+  }
+});
+
 
 
 

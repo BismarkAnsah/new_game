@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="780px" height="194px" viewBox="0 0 780 194" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>编组 15</title>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="3-时时彩-输入号码-2" transform="translate(-327.000000, -312.000000)" fill="#999999">
+            <g id="编组-15" transform="translate(327.000000, 312.000000)">
+                <text id="输入注单操作：" font-family="PingFang SC, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif" font-size="14" color="#999" font-weight="bold">
+                    <tspan x="0" y="15">Input betting order operation:</tspan>
+                </text>
+                <text id="导入注单文件：" font-family="PingFang SC, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif" font-size="14" color="#999" font-weight="bold">
+                    <tspan x="0" y="111">Import betting file:</tspan>
+                </text>
+                <text id="1、请将您要投注的号码输入或粘贴到输入框" font-family="PingFang SC, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif" font-size="13" font-weight="normal">
+                    <tspan x="0" y="42">1. Enter or paste bet number into input box.</tspan>
+                </text>
+                <text id="1、导入的注单文件，必须是-txt-格式" font-family="PingFang SC, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif" font-size="13" font-weight="normal">
+                    <tspan x="0" y="138">1. Export orders document must be in txt format.</tspan>
+                </text>
+                <text id="2、可点击导入按钮或将文件拖拽到文本框进" font-family="PingFang SC, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif" font-size="13" font-weight="normal">
+                    <tspan x="0" y="164">2. Export or drag document into input box to upload.</tspan>
+                </text>
+                <text id="3、最高可导入10万注，若文件较大时导入" font-family="PingFang SC, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif" font-size="13" font-weight="normal">
+                    <tspan x="0" y="190">3. Export limits as 100K betting. Export longer if huge document. Be patient.</tspan>
+                </text>
+                <text id="2、每两注号码之间请用-TAB-、回车、" font-family="PingFang SC, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif" font-size="13" font-weight="normal">
+                    <tspan x="0" y="68">2. Use TAB, Enter, Space or Symbol between 2 betting No. (,), (;), (I) etc. as orders. </tspan>
+                    <tspan x="312.129" y="68" font-family="PingFang SC, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif" font-weight="bold"></tspan>
+                    <tspan x="602.277" y="68"></tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
