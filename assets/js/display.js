@@ -110,35 +110,32 @@ class RenderPage {
         let buttonNumber = 1;
         let numberButtons = ``;
         for (let buttonNumber = 1; buttonNumber <= 9; buttonNumber++) {
-            numberButtons += `<button id="but_line_1" value="0" class="active">${buttonNumber}</button>`;
+            numberButtons += `<li><button id="but_line_1" value="0" class="">${buttonNumber}</button></li>`;
         }
-
         let rowInterface = ``;
         this.labels.forEach(label => {
             rowInterface += `<div class="all-slots-parent">
                         <div class="first-3-straight">${label}</div>
                             <div class="main-slots-wrapper All_Select">
                                 <ul class="button-Line-list">
-                                    <li>
-                                        ${numberButtons};
-                                    </li>
+                                        ${numberButtons}
                                 </ul>
                             </div>
                             <div class="stake-type-parent">
                                 <div class="stake-type">
                                 ${this.controlButtons.rowAll}
-                                ${this.controlButtons.rowBig}${this.controlButtons.rowSmall}${this.controlButtons.rowOdd}${this.controlButtons.rowEven}
+                                ${this.controlButtons.rowBig}${this.controlButtons.rowSmall}${this.controlButtons.rowOdd}${this.controlButtons.rowEven}${this.controlButtons.rowClear}
                                 </div>
                             </div>
                         </div>`;
             buttonNumber++;
         });
 
-        $(".slot.parent").html(rowInterface);
+        $(".game__selections_wrapper").html(rowInterface);
     }
 }
 
 let render = new RenderPage();
 render.displayGameGroups();
 render.displayGameSelections();
-// render.displayGameControls();
+render.displayGameControls();
