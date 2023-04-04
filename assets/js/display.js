@@ -22,14 +22,7 @@ class RenderPage {
     ];
 
 
-    controlButtons = {
-        rowAll: `<button class="control__buttons all_btn _row">All</button>`,
-        rowBig: `<button class="control__buttons big_btn">Big</button>`,
-        rowSmall: `<button class="control__buttons small_btn">Small</button>`,
-        rowOdd: `<button class="control__buttons odd_btn">Odd</button>`,
-        rowEven: `<button class="control__buttons even_btn">Even</button>`,
-        rowClear: `<button class="control__buttons clear_btn _row">Clear</button>`
-    }
+
 
     labels = ["1st", "2nd", "3rd", "4th", "5th"];
 
@@ -108,27 +101,33 @@ class RenderPage {
 
     displayGameControls() {
         let buttonNumber = 1;
-        let numberButtons = ``;
-        for (let buttonNumber = 1; buttonNumber <= 9; buttonNumber++) {
-            numberButtons += `<li><button id="but_line_1" value="0" class="">${buttonNumber}</button></li>`;
-        }
+        let rowIndex = 1;
+        
         let rowInterface = ``;
         this.labels.forEach(label => {
             rowInterface += `<div class="all-slots-parent">
                         <div class="first-3-straight">${label}</div>
                             <div class="main-slots-wrapper All_Select">
-                                <ul class="button-Line-list">
-                                        ${numberButtons}
-                                </ul>
+                                <ul class="button-Line-list">`;
+                                for (let buttonNumber = 0; buttonNumber <= 9; buttonNumber++) {
+                                    rowInterface += `<li><button id="but_line_1" value="${buttonNumber}" class="number-button-b row${rowIndex}">${buttonNumber}</button></li>`;
+                                }
+
+                               rowInterface += `</ul>
                             </div>
                             <div class="stake-type-parent">
                                 <div class="stake-type">
-                                ${this.controlButtons.rowAll}
-                                ${this.controlButtons.rowBig}${this.controlButtons.rowSmall}${this.controlButtons.rowOdd}${this.controlButtons.rowEven}${this.controlButtons.rowClear}
+                                <button class="control__buttons all_btn _row row${rowIndex}">All</button>
+                                <button class="control__buttons big_btn row${rowIndex}">Big</button>
+                                <button class="control__buttons small_btn row${rowIndex}">Small</button>
+                                <button class="control__buttons odd_btn row${rowIndex}">Odd</button>
+                                <button class="control__buttons even_btn row${rowIndex}">Even</button>
+                                <button class="control__buttons clear_btn _row row${rowIndex}">Clear</button>
                                 </div>
                             </div>
                         </div>`;
             buttonNumber++;
+            rowIndex++;
         });
 
         $(".game__selections_wrapper").html(rowInterface);
@@ -139,3 +138,59 @@ let render = new RenderPage();
 render.displayGameGroups();
 render.displayGameSelections();
 render.displayGameControls();
+
+
+//all button
+$(document).on("click", ".all_btn._row", function () {
+    let rowIndex = $(this).attr("class").split(" ")[3].slice(-1);
+    $(`.number-button-b.row${rowIndex}`).addClass("active");
+});
+
+
+//big button
+$(document).on("click", ".big_btn", function () {
+    let rowIndex = $(this).attr("class").split(" ")[2].slice(-1);
+    $(`.number-button-b.row${rowIndex}`).removeClass("active");
+    $(`.number-button-b.row${rowIndex}`).filter(function() {
+        return $(this).val() >= 5 && $(this).val() <= 9;
+      }).addClass("active");
+    
+});
+
+//small button
+$(document).on("click", ".small_btn", function () {
+    let rowIndex = $(this).attr("class").split(" ")[2].slice(-1);
+    $(`.number-button-b.row${rowIndex}`).removeClass("active");
+    $(`.number-button-b.row${rowIndex}:lt(5)`).addClass("active");
+});
+
+//odd button
+$(document).on("click", ".odd_btn", function () {
+    let rowIndex = $(this).attr("class").split(" ")[2].slice(-1);
+    $(`.number-button-b.row${rowIndex}`).removeClass("active");
+    console.log(rowIndex)
+    $(`.number-button-b.row${rowIndex}:odd`).addClass("active");
+});
+
+//even button
+$(document).on("click", ".even_btn", function () {
+    let rowIndex = $(this).attr("class").split(" ")[2].slice(-1);
+    $(`.number-button-b.row${rowIndex}`).removeClass("active");
+    $(`.number-button-b.row${rowIndex}:even`).addClass("active");
+});
+
+//clear button
+$(document).on("click", ".clear_btn._row", function () {
+    let rowIndex = $(this).attr("class").split(" ")[3].slice(-1);
+    $(`.number-button-b.row${rowIndex}`).removeClass("active");
+});
+
+
+//click on number button
+$(document).on("click", ".number-button-b", function () {
+    $(this).addClass("active");
+});
+
+let selection = $(".number-button-b.row1:nth-child(n+5)");
+console.log(selection);
+
