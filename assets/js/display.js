@@ -21,6 +21,12 @@ class RenderPage {
         "Bull Bull"
     ];
 
+
+
+
+    labels = ["1st", "2nd", "3rd", "4th", "5th"];
+
+
     gameSelections = [
         {
             "Straight": ["All 5 Straight(Joint)", "All 5 Straight(Manual)", "All 5 Straight(Combo)"]
@@ -32,6 +38,22 @@ class RenderPage {
 
 
     totalGamesToDisplay = 8;
+
+    // getPosition(number) {
+    //     let strNumber = number.toString();
+    //     let lastNumber = strNumber.slice(-1);
+    //     switch (lastNumber) {
+    //         case "1":
+    //             return strNumber + "st";
+    //         case "2":
+    //             return strNumber + "nd";
+    //         case "3":
+    //             return strNumber + "rd";
+    //         default:
+    //             return strNumber + "th";
+    //     }
+
+    // }
 
     displayGameGroups() {
         let allGameGroupButtons = `<li class="list__menu_btn active">${this.gameGroups[0]}</li>`;
@@ -48,7 +70,7 @@ class RenderPage {
         }
 
         let buttonInMoreGames = ``;
-        for (; i <totalGames; i++) {
+        for (; i < totalGames; i++) {
             buttonInMoreGames += `<li class="all-4-wrapper">${this.gameGroups[i]}</li>`
         }
 
@@ -56,28 +78,119 @@ class RenderPage {
         $(".more__games_items").html(buttonInMoreGames);
     }
 
-    displayGameSelections(gamesObj=this.gameSelections) {
+
+    displayGameSelections(gamesObj = this.gameSelections) {
         let allGameButtons = ``;
         gamesObj.forEach(gameTypeObj => {
-            let openingTag = `<div class="play-methods_straight">
+            let openingTags = `<div class="play-methods_straight">
                         <div class="game__labels">${Object.keys(gameTypeObj)[0]}</div>
                         <div class="uuuuuu">`;
             let gameElement = ``;
             let gameNames = Object.values(gameTypeObj)[0];
+
             gameNames.forEach(gameName => {
                 gameElement += `<div class="game__play_btns _width">${gameName}</div>`
             })
 
             let closingTags = `</div></div>`;
-            allGameButtons += openingTag + gameElement + closingTags;
+            allGameButtons += openingTags + gameElement + closingTags;
         });
         $(".play-methods-sections-parent").html(allGameButtons);
     }
 
 
-    displayGameControls() { }
+    displayGameControls() {
+        let buttonNumber = 1;
+        let rowIndex = 1;
+        
+        let rowInterface = ``;
+        this.labels.forEach(label => {
+            rowInterface += `<div class="all-slots-parent">
+                        <div class="first-3-straight">${label}</div>
+                            <div class="main-slots-wrapper All_Select">
+                                <ul class="button-Line-list">`;
+                                for (let buttonNumber = 0; buttonNumber <= 9; buttonNumber++) {
+                                    rowInterface += `<li><button id="but_line_1" value="${buttonNumber}" class="number-button-b row${rowIndex}">${buttonNumber}</button></li>`;
+                                }
+
+                               rowInterface += `</ul>
+                            </div>
+                            <div class="stake-type-parent">
+                                <div class="stake-type">
+                                <button class="control__buttons all_btn _row row${rowIndex}">All</button>
+                                <button class="control__buttons big_btn row${rowIndex}">Big</button>
+                                <button class="control__buttons small_btn row${rowIndex}">Small</button>
+                                <button class="control__buttons odd_btn row${rowIndex}">Odd</button>
+                                <button class="control__buttons even_btn row${rowIndex}">Even</button>
+                                <button class="control__buttons clear_btn _row row${rowIndex}">Clear</button>
+                                </div>
+                            </div>
+                        </div>`;
+            buttonNumber++;
+            rowIndex++;
+        });
+
+        $(".game__selections_wrapper").html(rowInterface);
+    }
 }
 
 let render = new RenderPage();
 render.displayGameGroups();
-// render.displayGameSelections();
+render.displayGameSelections();
+render.displayGameControls();
+
+
+//all button
+$(document).on("click", ".all_btn._row", function () {
+    let rowIndex = $(this).attr("class").split(" ")[3].slice(-1);
+    $(`.number-button-b.row${rowIndex}`).addClass("active");
+});
+
+
+//big button
+$(document).on("click", ".big_btn", function () {
+    let rowIndex = $(this).attr("class").split(" ")[2].slice(-1);
+    $(`.number-button-b.row${rowIndex}`).removeClass("active");
+    $(`.number-button-b.row${rowIndex}`).filter(function() {
+        return $(this).val() >= 5 && $(this).val() <= 9;
+      }).addClass("active");
+    
+});
+
+//small button
+$(document).on("click", ".small_btn", function () {
+    let rowIndex = $(this).attr("class").split(" ")[2].slice(-1);
+    $(`.number-button-b.row${rowIndex}`).removeClass("active");
+    $(`.number-button-b.row${rowIndex}:lt(5)`).addClass("active");
+});
+
+//odd button
+$(document).on("click", ".odd_btn", function () {
+    let rowIndex = $(this).attr("class").split(" ")[2].slice(-1);
+    $(`.number-button-b.row${rowIndex}`).removeClass("active");
+    console.log(rowIndex)
+    $(`.number-button-b.row${rowIndex}:odd`).addClass("active");
+});
+
+//even button
+$(document).on("click", ".even_btn", function () {
+    let rowIndex = $(this).attr("class").split(" ")[2].slice(-1);
+    $(`.number-button-b.row${rowIndex}`).removeClass("active");
+    $(`.number-button-b.row${rowIndex}:even`).addClass("active");
+});
+
+//clear button
+$(document).on("click", ".clear_btn._row", function () {
+    let rowIndex = $(this).attr("class").split(" ")[3].slice(-1);
+    $(`.number-button-b.row${rowIndex}`).removeClass("active");
+});
+
+
+//click on number button
+$(document).on("click", ".number-button-b", function () {
+    $(this).addClass("active");
+});
+
+let selection = $(".number-button-b.row1:nth-child(n+5)");
+console.log(selection);
+
