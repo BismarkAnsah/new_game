@@ -641,7 +641,7 @@ div.coldHotList {
 }
 .coldHotList_items {
   color: var(--black);
-  /* margin-left: 3px; */
+  margin-left: 3px;
   padding: 3px;
   cursor: pointer;
 }
