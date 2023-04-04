@@ -1668,6 +1668,12 @@ ul.multibetCounter {
   color: #fff;
 } 
 
+.ball-item.active, .ball-item.active > .showPrize {
+  box-shadow: 0 0px 0px 0 hsla(0, 0%, 69%, 0.5);
+  background: var(--color-deepskyblue-100);
+  color: #fff;
+} 
+
 .ball-item:hover .fa-info-circle{
   color: var(--color-white) !important;
 }
