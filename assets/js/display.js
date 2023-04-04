@@ -327,6 +327,15 @@ $(document).on("click", ".number-button-b, .ball-item", function () {
 });
 
 $(document).on("click", ".game__play_btns", function () {
-    
+    removeActive(".game__play_btns");
+    makeActive(this);
 });
 
+
+function makeActive(element) {
+    $(element).addClass("active");
+}
+
+function removeActive(element) {
+    $(element).removeClass("active");
+}
