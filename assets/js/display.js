@@ -339,3 +339,9 @@ function makeActive(element) {
 function removeActive(element) {
     $(element).removeClass("active");
 }
+
+function updateGameDetailsBar(gameName, gamePrize)
+{
+    $(".play-method-title").text(gameName);
+    $(".prize__bonus_amt").text(gamePrize);
+}
