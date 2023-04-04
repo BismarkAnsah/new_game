@@ -21,6 +21,19 @@ class RenderPage {
         "Bull Bull"
     ];
 
+
+    controlButtons = {
+        rowAll: `<button class="control__buttons all_btn _row">All</button>`,
+        rowBig: `<button class="control__buttons big_btn">Big</button>`,
+        rowSmall: `<button class="control__buttons small_btn">Small</button>`,
+        rowOdd: `<button class="control__buttons odd_btn">Odd</button>`,
+        rowEven: `<button class="control__buttons even_btn">Even</button>`,
+        rowClear: `<button class="control__buttons clear_btn _row">Clear</button>`
+    }
+
+    labels = ["1st", "2nd", "3rd", "4th", "5th"];
+
+
     gameSelections = [
         {
             "Straight": ["All 5 Straight(Joint)", "All 5 Straight(Manual)", "All 5 Straight(Combo)"]
@@ -32,6 +45,22 @@ class RenderPage {
 
 
     totalGamesToDisplay = 8;
+
+    // getPosition(number) {
+    //     let strNumber = number.toString();
+    //     let lastNumber = strNumber.slice(-1);
+    //     switch (lastNumber) {
+    //         case "1":
+    //             return strNumber + "st";
+    //         case "2":
+    //             return strNumber + "nd";
+    //         case "3":
+    //             return strNumber + "rd";
+    //         default:
+    //             return strNumber + "th";
+    //     }
+
+    // }
 
     displayGameGroups() {
         let allGameGroupButtons = `<li class="list__menu_btn active">${this.gameGroups[0]}</li>`;
@@ -48,7 +77,7 @@ class RenderPage {
         }
 
         let buttonInMoreGames = ``;
-        for (; i <totalGames; i++) {
+        for (; i < totalGames; i++) {
             buttonInMoreGames += `<li class="all-4-wrapper">${this.gameGroups[i]}</li>`
         }
 
@@ -56,28 +85,60 @@ class RenderPage {
         $(".more__games_items").html(buttonInMoreGames);
     }
 
-    displayGameSelections(gamesObj=this.gameSelections) {
+
+    displayGameSelections(gamesObj = this.gameSelections) {
         let allGameButtons = ``;
         gamesObj.forEach(gameTypeObj => {
-            let openingTag = `<div class="play-methods_straight">
+            let openingTags = `<div class="play-methods_straight">
                         <div class="game__labels">${Object.keys(gameTypeObj)[0]}</div>
                         <div class="uuuuuu">`;
             let gameElement = ``;
             let gameNames = Object.values(gameTypeObj)[0];
+
             gameNames.forEach(gameName => {
                 gameElement += `<div class="game__play_btns _width">${gameName}</div>`
             })
 
             let closingTags = `</div></div>`;
-            allGameButtons += openingTag + gameElement + closingTags;
+            allGameButtons += openingTags + gameElement + closingTags;
         });
         $(".play-methods-sections-parent").html(allGameButtons);
     }
 
 
-    displayGameControls() { }
+    displayGameControls() {
+        let buttonNumber = 1;
+        let numberButtons = ``;
+        for (let buttonNumber = 1; buttonNumber <= 9; buttonNumber++) {
+            numberButtons += `<button id="but_line_1" value="0" class="active">${buttonNumber}</button>`;
+        }
+
+        let rowInterface = ``;
+        this.labels.forEach(label => {
+            rowInterface += `<div class="all-slots-parent">
+                        <div class="first-3-straight">${label}</div>
+                            <div class="main-slots-wrapper All_Select">
+                                <ul class="button-Line-list">
+                                    <li>
+                                        ${numberButtons};
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="stake-type-parent">
+                                <div class="stake-type">
+                                ${this.controlButtons.rowAll}
+                                ${this.controlButtons.rowBig}${this.controlButtons.rowSmall}${this.controlButtons.rowOdd}${this.controlButtons.rowEven}
+                                </div>
+                            </div>
+                        </div>`;
+            buttonNumber++;
+        });
+
+        $(".slot.parent").html(rowInterface);
+    }
 }
 
 let render = new RenderPage();
 render.displayGameGroups();
 render.displayGameSelections();
+// render.displayGameControls();
