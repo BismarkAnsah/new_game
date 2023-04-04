@@ -519,6 +519,11 @@ ul.list.column {
   white-space: nowrap;
 }
 
+.game__play_btns.active{
+  background: linear-gradient(#4955c2b9, #a807a8c5);
+  color: var(--color-white);
+}
+
 .all__play_btns > * {
   margin: 1rem 0;
 }
