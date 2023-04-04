@@ -71,7 +71,7 @@ class RenderPage {
     // }
 
     displayGameGroups() {
-        let allGameGroupButtons = `<li class="list__menu_btn active">${this.gameGroups[0]}</li>`;
+        let allGameGroupButtons = `<li class="list__menu_btn active game_name">${this.gameGroups[0]}</li>`;
         let totalGames = this.gameGroups.length;
         let moreButton = `<li class="list__menu_btn" id="toggle-offload">more</li>`;
         let firstLoopLength = totalGames;
@@ -81,12 +81,12 @@ class RenderPage {
         }
         let i = 1
         for (; i < firstLoopLength; i++) {
-            allGameGroupButtons += `<li class="list__menu_btn">${this.gameGroups[i]}</li>`
+            allGameGroupButtons += `<li class="list__menu_btn game_name">${this.gameGroups[i]}</li>`
         }
 
         let buttonInMoreGames = ``;
         for (; i < totalGames; i++) {
-            buttonInMoreGames += `<li class="all-4-wrapper">${this.gameGroups[i]}</li>`
+            buttonInMoreGames += `<li class="all-4-wrapper game_name">${this.gameGroups[i]}</li>`
         }
 
         $('.button-list').prepend(allGameGroupButtons);
@@ -114,12 +114,12 @@ class RenderPage {
     }
 
 
-    displayGameControls1() {
+    displayGameControls1(labels) {
         let buttonNumber = 1;
         let rowIndex = 1;
 
         let rowInterface = ``;
-        this.labels.forEach(label => {
+        labels.forEach(label => {
             rowInterface += `<div class="all-slots-parent">
                         <div class="first-3-straight">${label}</div>
                             <div class="main-slots-wrapper All_Select">
@@ -147,8 +147,7 @@ class RenderPage {
 
         $(".game__selections_wrapper").html(rowInterface);
     }
-    displayGameControls2() {
-        let buttonNumber = 1;
+    displayGameControls2(maxButtonValue) {
         let rowIndex = 1;
 
         let rowInterface = ``;
@@ -157,7 +156,7 @@ class RenderPage {
                         <div class="first-3-straight">${label}</div>
                             <div class="main-slots-wrapper All_Select">
                                 <ul class="button-Line-list _wrap">`;
-            for (let buttonNumber = 0; buttonNumber <= 27; buttonNumber++) {
+            for (let buttonNumber = 0; buttonNumber <= maxButtonValue; buttonNumber++) {
                 rowInterface += `<li><button id="but_line_1" value="${buttonNumber}" class="number-button-b row${rowIndex}">${buttonNumber}</button></li>`;
             }
 
@@ -178,14 +177,15 @@ class RenderPage {
             rowIndex++;
         });
 
-        $(".game__selections_wrapper").html(rowInterface);
+        $(".everything__divs").html(rowInterface);
     }
 
     displayGameControls3() {
-        let gameInterface = ``;
+        let gameInterface = `<ul class="balls-ul-dragon longhu ul-longhuhe no-position">`;
         this.gamesAndOdds.labels.forEach((label) => {
             let games = this.gamesAndOdds.games;
             let gameNames = Object.keys(games);
+             
             gameInterface += `<li class="balls-row longhuhe balls-row-lryl">
                             <div class="row-title"><span>${label}</span></div>
                             <div class="row-balls">
@@ -239,7 +239,8 @@ class RenderPage {
                             </div> 
                         </li>
                 `});
-        $(".balls-ul-dragon").html(gameInterface);
+                gameInterface += `</ul>`;
+        $(".everything__divs").html(gameInterface);
     }
 
     displayGameControls4() {
@@ -262,12 +263,31 @@ class RenderPage {
         });
         $(".balls-ul").html(gameInterface);
     }
+
+    renderDisplay(gameJson){
+
+        switch(gameJson.
+            ){
+            case "1":
+                this.displayGameControls1(gameJson.labels);
+                break;
+            case "2":
+                this.displayGameControls2(gameJson.maxButtonValue);
+                break;
+            case "3":
+                this.displayGameControls3();
+                break;
+            case "4":
+                this.displayGameControls4();
+                break;
+        }
+    }
 }
 
 let render = new RenderPage();
 render.displayGameGroups();
 render.displayGameSelections();
-render.displayGameControls1();
+render.displayGameControls3();
 
 
 //all button
@@ -331,6 +351,10 @@ $(document).on("click", ".game__play_btns", function () {
     makeActive(this);
 });
 
+$(document).on("click", ".game_name", function () {
+    removeActive(".game_name");
+    makeActive(this);
+});
 
 function makeActive(element) {
     $(element).addClass("active");
@@ -345,3 +369,4 @@ function updateGameDetailsBar(gameName, gamePrize)
     $(".play-method-title").text(gameName);
     $(".prize__bonus_amt").text(gamePrize);
 }
+
