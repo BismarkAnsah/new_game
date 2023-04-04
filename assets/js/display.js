@@ -198,15 +198,15 @@ class RenderPage {
 
     displayGameControls3()
     {
-        <ul class="balls-ul-dragon longhu ul-longhuhe no-position">
+            `<ul class="balls-ul-dragon longhu ul-longhuhe no-position">
                         <li class="balls-row longhuhe balls-row-lryl">
                             <div class="row-title"><span>1st V 2nd</span></div>
                             <div class="row-balls">
                                 <div class="ball">
                                     <div class="ball-item">
-                                        Dragon
+                                        ${gameName}
                                         <div class="showPrize">
-                                            0.0022
+                                            ${odds}
                                         </div>
                                         <div class="introduce">
                                             <span class="el-tooltip introduce-symbol icon-quest-purple" trigger="hover" aria-describedby="el-tooltip-3316" tabindex="0">
@@ -221,9 +221,9 @@ class RenderPage {
                                 </div>
                                 <div class="ball">
                                     <div class="ball-item">
-                                        Tiger
+                                       ${gameName}
                                         <div class="showPrize">
-                                            0.0022
+                                            ${odds}
                                         </div>
                                         <div class="introduce">
                                             <span class="el-tooltip introduce-symbol icon-quest-purple" trigger="hover" aria-describedby="el-tooltip-3316" tabindex="0">
@@ -236,9 +236,9 @@ class RenderPage {
                                 </div>
                                 <div class="ball">
                                     <div class="ball-item">
-                                        Tie
+                                        ${gameName}
                                         <div class="showPrize">
-                                            0.0099
+                                            ${odds}
                                         </div>
                                         <div class="introduce">
                                             <span class="el-tooltip introduce-symbol icon-quest-purple" trigger="hover" aria-describedby="el-tooltip-3316" tabindex="0">
@@ -251,7 +251,7 @@ class RenderPage {
                                 </div>
                             </div> 
                         </li>
-                    </ul>
+                    </ul>`
     }
 }
 
