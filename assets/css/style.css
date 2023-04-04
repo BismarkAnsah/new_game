@@ -1798,3 +1798,37 @@ ul.multibetCounter {
   margin-left: 0px;
   display: flex;
 }
+
+.empty.en_us {
+  background-image: url("/assets/images/public/placeholder2.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 780px;
+  height: 230px;
+  resize: both;
+  /* background-position: 100% 100%; */
+}
+.textarea-box textarea.empty {
+  background-position: 20px 20px;
+  background-repeat: no-repeat;
+}
+
+.textarea-box {
+  text-align: center;
+}
+.textarea-box textarea:focus {
+  outline: none;
+  border-color: #719ece;
+  box-shadow: 0 0 2px #719ece;
+}
+
+ .textarea-box textarea {
+  height: 230px;
+  width: 780px;
+  max-width: 1000px;
+  padding: 25px;
+  border-radius: 6px;
+  border: 1px solid #c9c9c9;
+  background-color: #fcfcfc #949494;
+  overflow: auto;
+}
