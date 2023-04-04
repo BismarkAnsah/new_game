@@ -1591,7 +1591,7 @@ ul.multibetCounter {
   /* background-color: #aa3434; */
   box-shadow: none;
   background-image: none;
-  margin: 0 10px;
+  /* margin: 0 10px; */
   min-height: 130px;
   padding: 20px 10px 10px;
 }
@@ -1602,12 +1602,13 @@ ul.multibetCounter {
   margin-bottom: 15px;
 }
 
-.balls-ul .balls-row {
+.balls-ul-dragon .balls-row-dragon {
   display: flex;
   align-items: center;
   /* align-items: flex-start; */
   margin-bottom: 15px;
 }
+
 
 .ball .ball-item {
   width: 100px !important;
@@ -1619,6 +1620,7 @@ ul.multibetCounter {
   line-height: 1.6;
   border-radius: 6px;
   position: relative;
+  cursor: pointer;
   color: #1b1b1b;
   margin-right: 10px;
   background-image: linear-gradient(180deg, #fff, #fff 77%, #f1f1f1);
@@ -1627,11 +1629,18 @@ ul.multibetCounter {
   font-weight: 500;
 }
 
+.ball-item:hover, .ball-item:hover > * {
+  box-shadow: 0 0px 0px 0 hsla(0, 0%, 69%, 0.5);
+  background: var(--color-deepskyblue-100);
+  color: #fff;
+} 
+
 .showPrize {
   color: #1b1b1b;
   
 }
-.balls-row .row-title {
+
+.balls-row-dragon .row-title {
   flex: none;
   width: 57px;
   line-height: 36px;
@@ -1656,5 +1665,41 @@ ul.multibetCounter {
   display: inline-block;
   width: 14px;
   height: 14px;
+  color: var(--black);
   background-size: contain;
 }
+
+/*--------------------------------------------------------------
+# For Hot and cold button styles in dragon and tiger
+--------------------------------------------------------------*/
+
+.ball-item .cmInBalls {
+  font-family: DINAlternate;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  text-align: center;
+  color: #fff;
+  font-size: 0;
+}
+
+.lottery-content .balls-plate .balls-ul .balls-row .row-balls .ball .ball-item .cmInBalls > span.hot {
+  border-radius: 4px;
+  box-shadow: 0 1px 1px 0 hsla(0,0%,63.5%,.5);
+}
+
+.ball-item .cmInBalls>span {
+  display: inline-block;
+  position: relative;
+  min-width: 16px;
+  height: 13px;
+  font-size: 12px;
+  line-height: 14px;
+  background-blend-mode: overlay,normal;
+  overflow: hidden;
+  margin-right: 1.5px;
+}
+
+/*--------------------------------------------------------------
+# End of Hot and cold button styles in dragon and tiger
+--------------------------------------------------------------*/
