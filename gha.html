@@ -22,12 +22,25 @@
       text-align: center;
       height: 100vh;
     }
+    .zoom-in-div {
+  display: inline-block;
+  padding: 10px;
+  border: 2px solid black;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.zoom-in-div:hover {
+  transform: scale(1.1);
+}
+
   </style>
   <div class="grid-container">
     <div class="grid-item">1</div>
     <div class="grid-item">2</div>
     <div class="grid-item">3</div>
   </div>
+  <div class="zoom-in-div"></div>
 
 </body>
 

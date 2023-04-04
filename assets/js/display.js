@@ -1,3 +1,5 @@
+
+import { buttonActiveAnimator } from './main.js';
 class RenderPage {
 
     gameGroups = [
@@ -150,6 +152,8 @@ $(document).on("click", ".all_btn._row", function () {
 //big button
 $(document).on("click", ".big_btn", function () {
     let rowIndex = $(this).attr("class").split(" ")[2].slice(-1);
+    console.log($(`.number-button-b.row${rowIndex}`))
+    buttonActiveAnimator($(`.number-button-b.row${rowIndex}`));
     $(`.number-button-b.row${rowIndex}`).removeClass("active");
     $(`.number-button-b.row${rowIndex}`).filter(function() {
         return $(this).val() >= 5 && $(this).val() <= 9;
@@ -159,6 +163,7 @@ $(document).on("click", ".big_btn", function () {
 
 //small button
 $(document).on("click", ".small_btn", function () {
+    
     let rowIndex = $(this).attr("class").split(" ")[2].slice(-1);
     $(`.number-button-b.row${rowIndex}`).removeClass("active");
     $(`.number-button-b.row${rowIndex}:lt(5)`).addClass("active");
@@ -166,6 +171,7 @@ $(document).on("click", ".small_btn", function () {
 
 //odd button
 $(document).on("click", ".odd_btn", function () {
+    
     let rowIndex = $(this).attr("class").split(" ")[2].slice(-1);
     $(`.number-button-b.row${rowIndex}`).removeClass("active");
     console.log(rowIndex)
@@ -174,6 +180,7 @@ $(document).on("click", ".odd_btn", function () {
 
 //even button
 $(document).on("click", ".even_btn", function () {
+    
     let rowIndex = $(this).attr("class").split(" ")[2].slice(-1);
     $(`.number-button-b.row${rowIndex}`).removeClass("active");
     $(`.number-button-b.row${rowIndex}:even`).addClass("active");
@@ -188,7 +195,7 @@ $(document).on("click", ".clear_btn._row", function () {
 
 //click on number button
 $(document).on("click", ".number-button-b", function () {
-    $(this).addClass("active");
+    $(this).toggleClass("active");
 });
 
 let selection = $(".number-button-b.row1:nth-child(n+5)");
