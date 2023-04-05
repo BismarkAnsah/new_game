@@ -29,7 +29,9 @@ class RenderPage {
     labels = ["1st", "2nd", "3rd", "4th", "5th"];
 
     games4 = {
-        "labels": ["Big", "Small", "Odd", "Even"]
+        "1st": ["Big", "Small", "Odd", "Even"],
+        "2nd": ["Big", "Small", "Odd", "Even"],
+        "3rd": ["Big", "Small", "Odd", "Even"]
     }
     gamesAndOdds = {
         "labels": ["1v2", "1v3", "1v4", "1v5", "2v3", "2v4", "2v5", "3v4", "3v5", "4v5"],
@@ -114,10 +116,9 @@ class RenderPage {
     }
 
 
-    displayGameControls1(labels) {
-        let buttonNumber = 1;
+    displayGameControls1(labels = this.labels) {
         let rowIndex = 1;
-
+        let buttonNumber = 1;
         let rowInterface = ``;
         labels.forEach(label => {
             rowInterface += `<div class="all-slots-parent">
@@ -147,16 +148,18 @@ class RenderPage {
 
         $(".game__selections_wrapper").html(rowInterface);
     }
-    displayGameControls2(maxButtonValue) {
-        let rowIndex = 1;
 
+    displayGameControls2(labels = [""], maxButtonValue = 27, wrap = true) {
+        let rowIndex = 1;
+        let buttonNumber;
         let rowInterface = ``;
-        [""].forEach(label => {
+        wrap = wrap ? "_wrap" : "";
+        labels.forEach(label => {
             rowInterface += `<div class="all-slots-parent">
                         <div class="first-3-straight">${label}</div>
                             <div class="main-slots-wrapper All_Select">
-                                <ul class="button-Line-list _wrap">`;
-            for (let buttonNumber = 0; buttonNumber <= maxButtonValue; buttonNumber++) {
+                                <ul class="button-Line-list ${wrap}">`;
+            for (buttonNumber = 0; buttonNumber <= maxButtonValue; buttonNumber++) {
                 rowInterface += `<li><button id="but_line_1" value="${buttonNumber}" class="number-button-b row${rowIndex}">${buttonNumber}</button></li>`;
             }
 
@@ -185,10 +188,10 @@ class RenderPage {
         this.gamesAndOdds.labels.forEach((label) => {
             let games = this.gamesAndOdds.games;
             let gameNames = Object.keys(games);
-             
+
             gameInterface += `<li class="balls-row longhuhe balls-row-lryl">
-                            <div class="row-title"><span>${label}</span></div>
-                            <div class="row-balls">
+                             <div class="row-title"><span>${label}</span></div>
+                             <div class="row-balls">
                                 <div class="ball">
                                     <div class="ball-item">
                                         ${gameNames[0]}
@@ -239,35 +242,106 @@ class RenderPage {
                             </div> 
                         </li>
                 `});
-                gameInterface += `</ul>`;
+        gameInterface += `</ul>`;
         $(".everything__divs").html(gameInterface);
     }
 
     displayGameControls4() {
         let gameInterface = ``;
-        this.games4.labels.forEach((label) => {
-            gameInterface += `<div class="row-title"><span>1st</span></div>
-                                <div class="ball">
-                                  <div class="ball-item long">
-                                    ${label}  
-                                    <div class="cmInBalls">
-                                      <span class="hot"></span>
-                                      <span class="miss"></span>
-                                    </div>
-                                  </div>
-                                  <div class="ball-cm" style="display: none">
-                                    
-                                    
-                                  </div>
-                                </div>`
-        });
-        $(".balls-ul").html(gameInterface);
+        for (const [label, buttonNames] of Object.entries(this.games4)) {
+            <ul class="balls-ul daxiaodanshuang ul-qianerzuhe">
+    <li class="balls-row qianerzuhe balls-row-lryl">
+        <div class="row-title"><span>1st</span></div>
+        <div class="row-balls">
+            <div class="ball">
+                <div class="ball-item long">
+                    Big
+
+
+                    <div class="cmInBalls">
+                        <span class="hot"></span>
+                        <span class="miss"></span>
+                    </div>
+                </div>
+                <div class="ball-cm" style="display: none">
+
+
+                </div>
+            </div>
+            <div class="ball">
+                <div class="ball-item long">
+                    Small
+
+
+                    <div class="cmInBalls">
+                        <span class="hot"></span>
+                        <span class="miss"></span>
+                    </div>
+                </div>
+                <div class="ball-cm" style="display: none">
+
+
+                </div>
+            </div>
+            <div class="ball">
+                <div class="ball-item long">
+                    Odd
+
+
+                    <div class="cmInBalls">
+                        <span class="hot"></span>
+                        <span class="miss"></span>
+                    </div>
+                </div>
+                <div class="ball-cm" style="display: none">
+
+
+                </div>
+            </div>
+            <div class="ball">
+                <div class="ball-item long">
+                    Even
+
+
+                    <div class="cmInBalls">
+                        <span class="hot"></span>
+                        <span class="miss"></span>
+                    </div>
+                </div>
+                <div class="ball-cm" style="display: none">
+
+
+                </div>
+            </div>
+        </div>
+
+    </li>
+
+
+</ul>
+        }
     }
 
-    renderDisplay(gameJson){
+    displayGameControls5() {
+        let gameInterface = `<div>
+                            <div class="textarea-box">
+                                <textarea spellcheck="false" id="myTextarea" autocapitalize="off" autocomplete="off" autocorrect="off" class="empty en_us"></textarea>
+                            </div>
+                            <!-- <div class="danshi-btngroup">
+                            <button class="uploadfile">
+                                    <i class="mk-icon icon-upload"></i>
+                            Upload
+                            <input type="file" id="uploadFile" accept=".txt">
+                        </button>
+                        <button class="btn-clear">Cancel</button>
+                    </div> -->
+                        </div>`;
+        $(".everything__divs").html(gameInterface);
+    }
 
-        switch(gameJson.
-            ){
+    renderDisplay(gameJson) {
+
+        switch (gameJson.gameType) {
             case "1":
                 this.displayGameControls1(gameJson.labels);
                 break;
@@ -284,10 +358,13 @@ class RenderPage {
     }
 }
 
+
+
 let render = new RenderPage();
 render.displayGameGroups();
 render.displayGameSelections();
-render.displayGameControls3();
+// render.displayGameControls2([""], 27, true)
+// render.displayGameControls4();
 
 
 //all button
@@ -300,7 +377,6 @@ $(document).on("click", ".all_btn._row", function () {
 //big button
 $(document).on("click", ".big_btn", function () {
     let rowIndex = $(this).attr("class").split(" ")[2].slice(-1);
-    console.log($(`.number-button-b.row${rowIndex}`))
     buttonActiveAnimator($(`.number-button-b.row${rowIndex}`));
     $(`.number-button-b.row${rowIndex}`).removeClass("active");
     $(`.number-button-b.row${rowIndex}`).filter(function () {
@@ -311,7 +387,6 @@ $(document).on("click", ".big_btn", function () {
 
 //small button
 $(document).on("click", ".small_btn", function () {
-
     let rowIndex = $(this).attr("class").split(" ")[2].slice(-1);
     $(`.number-button-b.row${rowIndex}`).removeClass("active");
     $(`.number-button-b.row${rowIndex}:lt(5)`).addClass("active");
@@ -322,7 +397,6 @@ $(document).on("click", ".odd_btn", function () {
 
     let rowIndex = $(this).attr("class").split(" ")[2].slice(-1);
     $(`.number-button-b.row${rowIndex}`).removeClass("active");
-    console.log(rowIndex)
     $(`.number-button-b.row${rowIndex}:odd`).addClass("active");
 });
 
@@ -364,8 +438,7 @@ function removeActive(element) {
     $(element).removeClass("active");
 }
 
-function updateGameDetailsBar(gameName, gamePrize)
-{
+function updateGameDetailsBar(gameName, gamePrize) {
     $(".play-method-title").text(gameName);
     $(".prize__bonus_amt").text(gamePrize);
 }
