@@ -5,10 +5,10 @@
     } -->
 </style>
   <rect width="100%" height="100%" fill="#fff"/>
-  <text x="20" y="20" font-size="14" font-weight="bold" fill="#949494">Input betting order operation:</text>
-  <text x="20" y="60" font-size="13" fill="#949494">1. Enter or paste bet number into input box.</text>
-  <text x="20" y="80" font-size="13" fill="#949494">2. Use TAB, Enter, Space or Symbol between 2 betting No. (,), (;), (I) etc. as orders.</text>
-  <text x="20" y="120" font-size="14" font-weight="bold" fill="#949494">Import betting file:</text>
-  <text x="20" y="160" font-size="13" fill="#949494">1. Export orders document must be in txt format.</text>
-  <text x="20" y="180" font-size="13" fill="#949494">2. Export or drag document into input box to upload. Export limits as 100K betting. Export longer if huge document. Be patient.</text>
+  <text x="6" y="18" font-size="14" font-weight="bold" fill="#949494">Input betting order operation:</text>
+  <text x="8" y="60" font-size="13" fill="#949494">1. Enter or paste bet number into input box.</text>
+  <text x="8" y="80" font-size="13" fill="#949494">2. Use TAB, Enter, Space or Symbol between 2 betting No. (,), (;), (I) etc. as orders.</text>
+  <text x="8" y="120" font-size="14" font-weight="bold" fill="#949494">Import betting file:</text>
+  <text x="8" y="160" font-size="13" fill="#949494">1. Export orders document must be in txt format.</text>
+  <text x="8" y="180" font-size="13" fill="#949494">2. Export or drag document into input box to upload. Export limits as 100K betting. Export longer if huge document. Be patient.</text>
 </svg>

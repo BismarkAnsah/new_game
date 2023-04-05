@@ -1,3 +1,8 @@
+.everything__divs{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
 /*--------------------------------------------------------------
 # Timer Box
 --------------------------------------------------------------*/
@@ -191,7 +196,7 @@
   height: 35px;
 }
 
-.show__draw_nums_btn {
+.show__draw_nums_btn, .show__draw_nums_btn-mini {
   position: relative;
 }
 
@@ -1546,7 +1551,7 @@ ul.multibetCounter {
   opacity: 1;
 }
 
-.ball-history-list-SSC {
+.ball-history-list-SSC, .ball-history-list-SSC-mini {
   width: 320px;
   /* height: 350px; */
   display: flex;
@@ -1565,14 +1570,18 @@ ul.multibetCounter {
   border-radius: 10px;
 }
 
-.ball-history-list-SSC li {
+.ball-history-list-SSC-mini {
+  top: 30px;
+}
+
+.ball-history-list-SSC li, .ball-history-list-SSC-mini li {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   width: inherit;
 }
 
-.ball-history-list-SSC li > * {
+.ball-history-list-SSC li > *, .ball-history-list-SSC-mini li > * {
   color: black;
 }
 
@@ -1770,7 +1779,7 @@ ul.multibetCounter {
 
 .balls-plate.SSC .balls-ul.daxiaodanshuang{
   background-color: #f0f0f0;
-  display: flex;
+  /* display: flex; */
   width: inherit;
   box-shadow: none;
   background-image: none;
@@ -1778,8 +1787,9 @@ ul.multibetCounter {
   min-height: 130px;
   padding: 20px 10px 10px;
 }
-.daxiaodanshuang{
-  justify-content: left;
+ul.daxiaodanshuang{
+  /* justify-content: left; */
+  display: block;
 }
 .qianerzuhe .row-balls{
   justify-content: start;
