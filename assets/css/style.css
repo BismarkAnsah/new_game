@@ -1,3 +1,8 @@
+.everything__divs{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
 /*--------------------------------------------------------------
 # Timer Box
 --------------------------------------------------------------*/
@@ -1774,7 +1779,7 @@ ul.multibetCounter {
 
 .balls-plate.SSC .balls-ul.daxiaodanshuang{
   background-color: #f0f0f0;
-  display: flex;
+  /* display: flex; */
   width: inherit;
   box-shadow: none;
   background-image: none;
@@ -1782,8 +1787,9 @@ ul.multibetCounter {
   min-height: 130px;
   padding: 20px 10px 10px;
 }
-.daxiaodanshuang{
-  justify-content: left;
+ul.daxiaodanshuang{
+  /* justify-content: left; */
+  display: block;
 }
 .qianerzuhe .row-balls{
   justify-content: start;
